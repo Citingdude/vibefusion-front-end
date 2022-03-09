@@ -1,10 +1,14 @@
 <template>
   <div>
-    <h1 class="text-lg">Admin dashboard</h1>
+    <h1 class="text-3xl">Admin dashboard</h1>
   </div>
 </template>
 
 <script setup>
+definePageMeta({
+  layout: "admin"
+})
+
 const { 
   data: home 
 } = await useFetch(
