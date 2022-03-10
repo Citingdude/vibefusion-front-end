@@ -5,7 +5,7 @@
     <div>
       <div class="space-y-4">
         <div v-for="(page, index) in pages" :key="index">
-          <NuxtLink :to="`pages/${page.slug}`">{{ page.title }}</NuxtLink>
+          <NuxtLink class="hover:text-blue-700" :to="`pages/${page.slug}`">{{ page.title }}</NuxtLink>
         </div>
       </div>
 
