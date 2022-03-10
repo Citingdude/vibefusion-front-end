@@ -1,0 +1,78 @@
+<template>
+  <div class="flex flex-col w-full bg-slate-50 p-8">
+    <h1 class="text-3xl font-bold mb-4">Pages</h1>
+
+    <div>
+      <div class="space-y-4">
+        <div v-for="(page, index) in pages" :key="index">
+          <NuxtLink :to="`pages/${page.slug}`">{{ page.title }}</NuxtLink>
+        </div>
+      </div>
+
+      <div class="mt-16">
+        <form @submit.prevent="sendForm()">
+          <div class="flex flex-col space-y-4 w-80">
+            <div class="flex flex-col shadow-sm space-y-2">
+              <label class="text-lg font-medium" for="">Slug</label>
+              <input v-model="formData.slug" type="text" />
+            </div>
+
+            <div class="flex flex-col shadow-sm space-y-2">
+              <label class="text-lg font-medium" for="">Title</label>
+              <input v-model="formData.title" type="text" />
+            </div>
+
+            <div class="flex flex-col shadow-sm space-y-2">
+              <label class="text-lg font-medium" for="">Hero title</label>
+              <input v-model="formData.data.hero.title" type="text" />
+            </div>
+          </div>
+
+          <button
+            class="mt-4 bg-blue-500 px-3 py-2 rounded-lg text-blue-50 hover:bg-blue-700 transition"
+            type="submit"
+          >
+            Send
+          </button>
+        </form>
+
+        <div class="mt-8">
+          <div>Slug: {{ formData.slug }}</div>
+          <div>Title: {{ formData.title }}</div>
+          <div>Hero title: {{ formData.data.hero.title }}</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</template>
+
+<script setup>
+import { ref, reactive } from "vue";
+
+definePageMeta({
+  layout: "admin",
+});
+
+const { data: pages } = await useFetch("http://localhost:3333/api/v1/pages");
+
+const formData = reactive({
+  slug: "",
+  title: "",
+  data: {
+    hero: {
+      title: "",
+    },
+  },
+});
+
+function sendForm() {
+  useFetch("http://localhost:3333/api/v1/pages", {
+    method: "POST",
+    body: formData,
+  });
+
+  formData.slug = "";
+  formData.title = "";
+  formData.data.hero.title = "";
+}
+</script>
