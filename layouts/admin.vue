@@ -1,11 +1,12 @@
 <script setup>
+import AppLogo from '~~/components/branding/AppLogo.vue';
 
 </script>
 
 <template>
   <div class="min-h-screen">
     <header class="bg-slate-100 px-8 py-4 flex justify-between">
-      <div>Logo</div>
+      <AppLogo class="w-40" />
 
       <div>Account</div>
     </header>
