@@ -27,6 +27,7 @@ const route = useRoute()
 
 definePageMeta({
   layout: "admin",
+  middleware: 'auth'
 });
 
 const { data: page } = await useFetch(`http://localhost:3333/api/v1/pages/${route.params.slug}`);

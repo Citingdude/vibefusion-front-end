@@ -61,6 +61,7 @@ import { ref, reactive } from "vue"
 
 definePageMeta({
   layout: "admin",
+  middleware: 'auth'
 })
 
 const { data: pages, refresh } = await useFetch("http://localhost:3333/api/v1/pages")
