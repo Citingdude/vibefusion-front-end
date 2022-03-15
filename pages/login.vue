@@ -48,11 +48,7 @@ import { store } from '@/store/store'
 const user = useUser()
 
 function setUser() {
-  console.log(store.user)
-
   store.setTrue()
-
-  console.log(store.user)
 }
 
 const formData = reactive({
@@ -60,18 +56,20 @@ const formData = reactive({
   password: ''
 })
 
-function logger() {
-  console.log(store.user)
-}
-
 async function login() {
-  console.log('login')
-
   const data = await useFetch("http://localhost:3333/api/v1/login", {
     method: "POST",
   })
     .then((data) => {
-      console.log(data.data.value)
+      store.user.token = data.data.value.token
+      store.user.tokenType = data.data.value.type
+
+      return navigateTo('/admin')
+    })
+
+    .catch((error) => {
+      console.log(error)
+      console.log("error")
     })
 
   formData.email = ""
