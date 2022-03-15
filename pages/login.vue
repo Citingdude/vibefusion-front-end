@@ -3,9 +3,7 @@
     <div>Login</div>
 
     <div>
-      <NuxtLink to="/admin">
-        Admin
-      </NuxtLink>
+      <NuxtLink to="/admin"> Admin </NuxtLink>
     </div>
 
     <div class="mt-16">
@@ -31,9 +29,20 @@
         </div>
 
         <button
-          class="mt-4 bg-blue-500 px-3 py-2 rounded-lg text-blue-50 hover:bg-blue-700 transition"
+          class="
+            mt-4
+            bg-blue-500
+            px-3
+            py-2
+            rounded-lg
+            text-blue-50
+            hover:bg-blue-700
+            transition
+          "
           type="submit"
-        >Send</button>
+        >
+          Send
+        </button>
       </form>
     </div>
 
@@ -43,36 +52,55 @@
 </template>
 
 <script setup>
-import { store } from '@/store/store'
+import { store } from "@/store/store";
 
-const user = useUser()
+const user = useUser();
+
+function logger() {
+  console.log(store.user)
+}
 
 function setUser() {
-  store.setTrue()
+  store.setTrue();
 }
 
 const formData = reactive({
-  email: '',
-  password: ''
-})
+  email: "",
+  password: "",
+});
 
 async function login() {
   const data = await useFetch("http://localhost:3333/api/v1/login", {
     method: "POST",
   })
     .then((data) => {
-      store.user.token = data.data.value.token
-      store.user.tokenType = data.data.value.type
+      store.user.token = data.data.value.token;
+      store.user.tokenType = data.data.value.type;
+      this.checkToken();
+    })
 
-      return navigateTo('/admin')
+    .then(() => {
+      return navigateTo("/admin");
     })
 
     .catch((error) => {
-      console.log(error)
-      console.log("error")
-    })
+      console.log(error);
+      console.log("error");
+    });
 
-  formData.email = ""
-  formData.password = ""
-} 
+  formData.email = "";
+  formData.password = "";
+}
+
+async function checkToken() {
+  const { data } = await useFetch("http://localhost:3333/api/v1/auth", {
+    headers: {
+      Authorization: `Bearer ${store.user.token}`,
+    },
+  });
+
+  if (data.value) {
+    store.user.validToken = true;
+  }
+}
 </script>

@@ -5,6 +5,7 @@ export const store = reactive({
     status: false,
     token: "",
     tokenType: "",
+    validToken: false,
   },
 
   setTrue() {
