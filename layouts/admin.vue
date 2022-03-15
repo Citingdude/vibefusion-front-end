@@ -1,6 +1,12 @@
 <script setup>
-import AppLogo from '~~/components/branding/AppLogo.vue';
+import AppLogo from "~~/components/branding/AppLogo.vue";
+import { store } from '@/store/store'
 
+function logout() {
+  store.logout()
+
+  return navigateTo('/login')
+}
 </script>
 
 <template>
@@ -8,15 +14,26 @@ import AppLogo from '~~/components/branding/AppLogo.vue';
     <header class="bg-slate-100 px-8 py-4 flex justify-between">
       <AppLogo class="w-40" />
 
-      <div>Account</div>
+      <div class="space-x-8 flex">
+        <NuxtLink v-if="! store.user.token" to="/login">Login</NuxtLink>
+        <button @click="logout()">Logout</button>
+      </div>
     </header>
 
     <main class="flex">
       <aside class="bg-slate-200 min-h-screen flex w-2/12">
         <div class="flex flex-col w-full">
-          <NuxtLink to="/admin" class="px-8 py-4 bg-slate-300 hover:bg-slate-400 w-full">Dashboard</NuxtLink>
+          <NuxtLink
+            to="/admin"
+            class="px-8 py-4 bg-slate-300 hover:bg-slate-400 w-full"
+            >Dashboard</NuxtLink
+          >
 
-          <NuxtLink to="/admin/pages" class="px-8 py-4 bg-slate-300 hover:bg-slate-400">Pages</NuxtLink>
+          <NuxtLink
+            to="/admin/pages"
+            class="px-8 py-4 bg-slate-300 hover:bg-slate-400"
+            >Pages</NuxtLink
+          >
         </div>
       </aside>
 
