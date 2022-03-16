@@ -72,15 +72,17 @@ const formData = reactive({
 async function login() {
   const data = await useFetch("http://localhost:3333/api/v1/login", {
     method: "POST",
+    body: formData
   })
     .then((data) => {
       store.user.token = data.data.value.token;
       store.user.tokenType = data.data.value.type;
-      this.checkToken();
     })
 
+    await checkToken()
+
     .then(() => {
-      return navigateTo("/admin");
+      return navigateTo('/admin')
     })
 
     .catch((error) => {

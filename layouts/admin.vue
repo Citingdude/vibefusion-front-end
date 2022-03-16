@@ -1,11 +1,15 @@
 <script setup>
 import AppLogo from "~~/components/branding/AppLogo.vue";
-import { store } from '@/store/store'
+import { store } from "@/store/store";
 
-function logout() {
-  store.logout()
+async function logout() {
+  await setValidToken().then(() => {
+    return navigateTo("/login");
+  });
+}
 
-  return navigateTo('/login')
+async function setValidToken() {
+  store.user.validToken = false;
 }
 </script>
 
