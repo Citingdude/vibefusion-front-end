@@ -57,7 +57,7 @@ import { store } from "@/store/store";
 const user = useUser();
 
 function logger() {
-  console.log(store.user)
+  console.log(store.user);
 }
 
 function setUser() {
@@ -70,28 +70,21 @@ const formData = reactive({
 });
 
 async function login() {
-  const data = await useFetch("http://localhost:3333/api/v1/login", {
-    method: "POST",
-    body: formData
-  })
-    .then((data) => {
+  try {
+    const data = await useFetch("http://localhost:3333/api/v1/login", {
+      method: "POST",
+      body: formData,
+    }).then((data) => {
       store.user.token = data.data.value.token;
       store.user.tokenType = data.data.value.type;
-    })
-
-    await checkToken()
-
-    .then(() => {
-      return navigateTo('/admin')
-    })
-
-    .catch((error) => {
-      console.log(error);
-      console.log("error");
     });
 
-  formData.email = "";
-  formData.password = "";
+    await checkToken().then(() => {
+      return navigateTo("/admin");
+    });
+  } catch (error) {
+    console.log(error);
+  }
 }
 
 async function checkToken() {
