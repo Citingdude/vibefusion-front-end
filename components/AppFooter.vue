@@ -32,7 +32,7 @@
 
       <div>
         <a class="flex max-w-xs" href="/">
-          <branding-Logo />
+          <BrandingAppLogo />
         </a>
       </div>
     </div>
