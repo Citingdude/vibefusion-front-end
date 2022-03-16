@@ -45,9 +45,6 @@
         </button>
       </form>
     </div>
-
-    <button @click="setUser()">Set user</button>
-    <button @click="logger()">Logger</button>
   </div>
 </template>
 
