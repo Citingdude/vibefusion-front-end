@@ -4,8 +4,6 @@ export default defineNuxtRouteMiddleware((to, from) => {
 
   const auth = store.user.token
 
-  console.log('auth middleware')
-
   async function checkToken() {
     const { data } = await useFetch('http://localhost:3333/api/v1/auth', {
       headers: {
