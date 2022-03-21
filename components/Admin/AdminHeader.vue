@@ -6,7 +6,7 @@
       </NuxtLink>
     </div>
 
-    <div class="space-x-8 flex w-1/2 justify-end items-center">
+    <div class="space-x-4 flex w-1/2 justify-end items-center">
       <AppButton to="/login" size="small">Login</AppButton>
       <AppButton @click="logout()" :button="true" to="/login" size="small" color="alt">Logout</AppButton>
     </div>
