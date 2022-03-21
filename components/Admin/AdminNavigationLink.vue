@@ -1,5 +1,11 @@
 <template>
-  <NuxtLink :to="props.to" class="px-8 py-4 bg-slate-300 hover:bg-slate-400 w-full">
+  <NuxtLink 
+    :to="props.to" 
+    class="
+    font-semibold
+    px-4 py-3 w-fit rounded-md border-opacity-0 border-transparent border
+    hover:bg-light-alt hover:border-accent hover:border-opacity-100
+    ">
     <slot />
   </NuxtLink>
 </template>
