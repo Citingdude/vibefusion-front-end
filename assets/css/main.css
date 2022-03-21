@@ -33,12 +33,21 @@
 }
 
 @layer components {
+    .btn-sm {
+        @apply py-2 px-4 border font-display text-base font-bold;
+    },
+    .btn-md {
+        @apply py-4 px-5 border-2 font-display text-lg font-bold rounded-tl-lg rounded-br-lg;
+    }
     .btn-m {
-        @apply py-4 px-5 border-2 font-body;
+        @apply py-4 px-5 border-2 font-display text-lg font-bold;
     },
     .btn-accent {
         @apply border-accent bg-accent text-light-main;
     },
+    .btn-alt {
+        @apply bg-light-alt text-accent border-light-main hover:border-accent;
+    }
     .btn-transparent {
         @apply border-accent;
     }
