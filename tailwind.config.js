@@ -25,7 +25,9 @@ module.exports = {
         '300': '#212133',
         '200': '#2D2D47',
         '100': '#3A3A5B',
-      }
+      },
+      transparent: 'transparent'
+
     },
     boxShadow: {
       sm: '0 1px 2px 0 rgba(102,102,204,0.05)',
