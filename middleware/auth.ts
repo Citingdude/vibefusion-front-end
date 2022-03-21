@@ -9,7 +9,7 @@ export default defineNuxtRouteMiddleware((to, from) => {
   async function checkToken() {
     const { data } = await useFetch('http://localhost:3333/api/v1/auth', {
       headers: {
-        Authorization: `Bearer ${store.user.token}`,
+        Authorization: `Bearer ${auth}`,
       }
     })
 
