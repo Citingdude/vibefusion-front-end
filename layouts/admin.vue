@@ -1,18 +1,3 @@
-<script setup>
-import AppLogo from "~~/components/branding/AppLogo.vue";
-import { store } from "@/store/store";
-
-async function logout() {
-  await setValidToken().then(() => {
-    return navigateTo("/login");
-  });
-}
-
-async function setValidToken() {
-  store.user.validToken = false;
-}
-</script>
-
 <template>
   <div class="min-h-screen">
     <AdminHeader />
