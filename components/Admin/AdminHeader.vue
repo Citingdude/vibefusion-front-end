@@ -1,5 +1,5 @@
 <template>
-  <header class="justify-between bg-slate-100 px-8 py-4 flex items-center">
+  <header class="justify-between bg-slate-100 px-8 py-4 flex items-center shadow-md">
     <div class="w-1/2">
       <NuxtLink to="/admin">
         <BrandingAppLogo class="w-60" />
