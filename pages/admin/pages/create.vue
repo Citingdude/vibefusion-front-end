@@ -1,5 +1,9 @@
 <template>
   <div class="flex flex-col w-full">
+    <div>
+      <NuxtLink to="/admin/pages">Back</NuxtLink>
+    </div>
+
     <div class="flex justify-between">
       <h1 class="text-3xl font-bold mb-4">Create new page</h1>
     </div>
