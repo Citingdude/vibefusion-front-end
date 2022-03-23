@@ -53,7 +53,6 @@ import { store } from "@/store/store";
 
 const user = useUser();
 const cookieToken = useCookie("token");
-const isAuthenticated = useCookie("isAuthenticated");
 
 function logger() {
   console.log(store.user);
@@ -77,7 +76,6 @@ async function login() {
       store.user.token = data.data.value.token;
       store.user.tokenType = data.data.value.type;
       cookieToken.value = data.data.value.token;
-      isAuthenticated.value = 'true';
     });
 
     await checkToken().then(() => {
@@ -94,12 +92,5 @@ async function checkToken() {
       Authorization: `Bearer ${cookieToken.value}`,
     },
   });
-
-  if (data.value) {
-    store.user.validToken = true;
-    isAuthenticated.value = 'true';
-  } else {
-    isAuthenticated.value = 'false';
-  }
 }
 </script>
