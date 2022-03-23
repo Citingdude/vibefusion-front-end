@@ -23,16 +23,14 @@
 </template>
 
 <script setup>
-import { store } from "@/store/store";
-
 const cookieToken = useCookie("token");
 
-async function setValidToken() {
-  cookieToken.value = "false";
+async function deleteCookieToken() {
+  cookieToken.value = "";
 }
 
 async function logout() {
-  await setValidToken().then(() => {
+  await deleteCookieToken().then(() => {
     return navigateTo("/login");
   });
 }
