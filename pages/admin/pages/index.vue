@@ -1,5 +1,5 @@
 <template>
-  <div class="flex flex-col w-full bg-slate-50 p-8">
+  <div class="flex flex-col w-full">
     <div class="flex justify-between">
       <h1 class="text-3xl font-bold mb-4">Pages</h1>
 
