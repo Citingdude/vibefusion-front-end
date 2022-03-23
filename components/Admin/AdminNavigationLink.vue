@@ -18,3 +18,9 @@ const props = defineProps({
   }
 })
 </script>
+
+<style scoped>
+.router-link-active {
+  @apply bg-light-alt border-accent border-opacity-100;
+}
+</style>
