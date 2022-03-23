@@ -18,16 +18,6 @@ export default defineNuxtRouteMiddleware(async (to, from) => {
     }
   };
 
-  // if (isAuthenticated.value.toString() === 'false') {
-  //   return navigateTo('/login')
-  // };
-
-  // checkToken();
-
-  async function canUserAccess() {
-    return true;
-  }
-
   const canAccess = await checkToken()
 
   if(!canAccess) {
