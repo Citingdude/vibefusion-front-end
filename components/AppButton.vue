@@ -2,7 +2,7 @@
   <NuxtLink
     v-if="!button"
     :to="props.to"
-    class="btn-hover max-w-max rounded-tl-xl rounded-br-xl"
+    class="btn-hover max-w-max rounded-tl-xl rounded-br-xl h-max"
     :class="getSize, getColor"
   >
     <slot />
