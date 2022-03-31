@@ -11,7 +11,7 @@ export default defineNuxtRouteMiddleware(async (to, from) => {
       }
     });
 
-    if (data.value) {
+    if (data.value === 'true') {
       return true;
     } else {
       return false;
