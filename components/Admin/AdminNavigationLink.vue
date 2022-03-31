@@ -2,7 +2,7 @@
   <NuxtLink 
     :to="props.to" 
     class="
-    font-semibold
+    font-semibold transition ease-in
     px-4 py-3 w-fit rounded-md border-opacity-0 border-transparent border
     hover:bg-light-alt hover:border-accent hover:border-opacity-100
     ">
