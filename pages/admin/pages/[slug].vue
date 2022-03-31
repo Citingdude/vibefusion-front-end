@@ -43,8 +43,6 @@
         </form>
       </div>
     </div>
-
-    <button @click="assignData()">Test</button>
   </div>
 </template>
 
@@ -53,23 +51,25 @@ import { ref, reactive, computed } from "vue";
 
 const route = useRoute()
 
+const { data: page } = await useFetch(`http://localhost:3333/api/v1/pages/${route.params.slug}`);
+
 definePageMeta({
   layout: "admin",
   middleware: 'auth'
 });
 
 const formData = reactive({
-  slug: "",
-  title: "",
+  slug: page.value.slug,
+  title: page.value.title,
   data: {
     hero: {
-      title: "",
+      title: page.value.data.hero.title,
     },
   },
 })
 
-function updatePage() {
-  const { refresh } = useFetch(`http://localhost:3333/api/v1/pages/${route.params.slug}`, {
+async function updatePage() {
+  const { refresh } = await useFetch(`http://localhost:3333/api/v1/pages/${route.params.slug}`, {
     method: "PATCH",
     body: formData
   })
@@ -79,10 +79,6 @@ function updatePage() {
 
 function assignData() {
   formData.slug = page.value.slug
-  
-  console.log(page.value.slug)
-  console.log(formData)
 }
 
-const { data: page } = await useFetch(`http://localhost:3333/api/v1/pages/${route.params.slug}`);
 </script>
