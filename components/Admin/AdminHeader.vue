@@ -25,13 +25,14 @@
 <script setup>
 const cookieToken = useCookie("token");
 
-async function deleteCookieToken() {
-  cookieToken.value = "";
-}
-
 async function logout() {
-  await deleteCookieToken().then(() => {
+  await useFetch("http://localhost:3333/api/v1/logout", {
+    method: "POST",
+    headers: {
+      Authorization: `Bearer ${cookieToken.value}`,
+    }
+  }).then(() => {
     return navigateTo("/login");
-  });
+  })
 }
 </script>
