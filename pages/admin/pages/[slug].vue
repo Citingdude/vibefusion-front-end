@@ -61,6 +61,10 @@
           </div>
 
           <div class="mt-8">
+            <TipTap v-model="formData.data.hero.title" />
+          </div>
+
+          <div class="mt-8">
             <AppButton type="submit" button size="small">Save</AppButton>
           </div>
         </form>
@@ -70,7 +74,7 @@
 </template>
 
 <script setup>
-import { ref, reactive, computed } from "vue";
+import { ref, reactive } from "vue";
 
 const route = useRoute()
 
