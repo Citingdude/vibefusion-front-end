@@ -8,8 +8,7 @@
           <h1
             class="text-5xl md:text-6xl lg:text-7xl text-center md:text-left font-display font-bold text-dark-400 mb-8 md:mb-12 lg:mb-24 leading-tight max-w-s"
           >
-            Versterk je merk met de juiste
-            <span class="text-accent">Vibe</span>
+            {{ home[0].data.hero.title }}
           </h1>
 
           <div class="flex flex-col md:flex-row items-center md:items-start gap-8">
@@ -17,20 +16,12 @@
               :text="'Onze diensten'"
               :link="{ path: '/', hash: '#onze-diensten' }"
             />
-            <ButtonsButtonLargeAlt
-              :text="'Bekijk de cases'"
-              :link="{ path: '/', hash: '#cases' }"
-            />
+            <ButtonsButtonLargeAlt :text="'Bekijk de cases'" :link="{ path: '/', hash: '#cases' }" />
           </div>
         </div>
 
         <div class="col-span-2 lg:col-span-6 anim-fade-in-right">
-          <img
-            width="100%"
-            height="auto"
-            src="~/assets/images/home-hero.svg"
-            alt="Hero"
-          />
+          <img width="100%" height="auto" src="~/assets/images/home-hero.svg" alt="Hero" />
         </div>
       </div>
     </div>
@@ -38,5 +29,6 @@
 </template>
 
 <script setup>
+const { data: home } = await useAsyncData('home', () => $fetch('http://localhost:3333/api/v1/pages'))
 
 </script>
