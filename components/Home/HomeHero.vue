@@ -13,10 +13,10 @@
 
           <div class="flex flex-col md:flex-row items-center md:items-start gap-8">
             <ButtonsButtonLargeMain
-              :text="'Onze diensten'"
+              :text="home[0].data.hero.button"
               :link="{ path: '/', hash: '#onze-diensten' }"
             />
-            <ButtonsButtonLargeAlt :text="'Bekijk de cases'" :link="{ path: '/', hash: '#cases' }" />
+            <ButtonsButtonLargeAlt :text="home[0].data.hero.button_alt" :link="{ path: '/', hash: '#cases' }" />
           </div>
         </div>
 
