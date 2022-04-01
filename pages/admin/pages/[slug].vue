@@ -30,13 +30,7 @@
             <h2 class="text-2xl font-semibold mb-4">Hero</h2>
 
             <div class="flex flex-col shadow-sm space-y-2">
-              <label class="text-lg font-medium" for>Hero title</label>
-              <input
-                class="border border-blue-50 rounded px-3 py-2"
-                v-model="formData.data.hero.title"
-                type="text"
-                :placeholder="formData.data.hero.title"
-              />
+              <TipTap v-model="formData.data.hero.title" />
             </div>
 
             <div class="flex flex-col shadow-sm space-y-2">
@@ -58,10 +52,6 @@
                 :placeholder="formData.data.hero.button_alt"
               />
             </div>
-          </div>
-
-          <div class="mt-8">
-            <TipTap v-model="formData.data.hero.title" />
           </div>
 
           <div class="mt-8">
