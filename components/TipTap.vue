@@ -31,5 +31,3 @@ const editor = useEditor({
   onUpdate: updateEditor
 })
 </script>
-
-<!-- @input="(event) => $emit('update:modelValue', editor.getHTML())" -->
