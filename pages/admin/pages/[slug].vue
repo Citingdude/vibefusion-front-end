@@ -1,11 +1,11 @@
 <template>
   <div class="flex flex-col w-full bg-slate-50 p-8">
-    <h1 class="text-3xl font-bold mb-4">Page: {{ $route.params.slug }}</h1>
+    <h1 class="text-3xl font-bold mb-4">{{ page.title }}</h1>
 
     <div>
       <div class="mt-16">
         <form @submit.prevent="updatePage()">
-          <div class="flex flex-col space-y-4 w-80">
+          <div class="flex flex-col space-y-4 max-w-lg">
             <div class="flex flex-col shadow-sm space-y-2">
               <label class="text-lg font-medium" for>Slug</label>
               <input
@@ -31,15 +31,14 @@
                 class="border border-blue-50 rounded px-3 py-2"
                 v-model="formData.data.hero.title"
                 type="text"
-                :placeholder="page.data.hero.title"
+                :placeholder="formData.data.hero.title"
               />
             </div>
           </div>
 
-          <button
-            class="mt-4 bg-blue-500 px-3 py-2 rounded-lg text-blue-50 hover:bg-blue-700 transition"
-            type="submit"
-          >Send</button>
+          <div class="mt-8">
+            <AppButton type="submit" button size="small">Save</AppButton>
+          </div>
         </form>
       </div>
     </div>
@@ -80,5 +79,4 @@ async function updatePage() {
 function assignData() {
   formData.slug = page.value.slug
 }
-
 </script>
