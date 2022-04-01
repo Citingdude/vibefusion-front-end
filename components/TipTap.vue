@@ -2,7 +2,7 @@
   <div>
     <button v-on:click="editor.chain().focus().toggleBold().run()">Bold</button>
   </div>
-  <editor-content :value="modelValue" :editor="editor" />
+  <editor-content class="border border-blue-50 rounded px-3 py-2" :value="modelValue" :editor="editor" />
 </template>
 
 <script setup>
@@ -30,9 +30,6 @@ const editor = useEditor({
 
   onUpdate: updateEditor
 })
-
-console.log(editor)
-
 </script>
 
 <!-- @input="(event) => $emit('update:modelValue', editor.getHTML())" -->
