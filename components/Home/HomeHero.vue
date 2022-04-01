@@ -5,10 +5,10 @@
     <div class="content-container items-center">
       <div class="grid grid-cols-2 lg:grid-cols-12 gap-12">
         <div class="col-span-2 lg:col-span-6 max-w-full items-center anim-fade-in-left">
-          <h1
+          <div
             v-html="home[0].data.hero.title"
             class="hero__title text-7xl font-display mb-24"
-          ></h1>
+          ></div>
 
           <div class="flex flex-col md:flex-row items-center md:items-start gap-8">
             <ButtonsButtonLargeMain
