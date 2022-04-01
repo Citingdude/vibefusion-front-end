@@ -10,5 +10,9 @@
     "nuxt3": "latest",
     "postcss": "^8.4.8",
     "tailwindcss": "^3.0.23"
+  },
+  "dependencies": {
+    "@tiptap/starter-kit": "^2.0.0-beta.183",
+    "@tiptap/vue-3": "^2.0.0-beta.90"
   }
 }
