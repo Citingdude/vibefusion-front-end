@@ -2,8 +2,6 @@
   <div class="flex flex-col w-full">
     <div class="flex justify-between">
       <h1 class="text-3xl font-bold mb-4">Pages</h1>
-
-      <AppButton to="/admin/pages/create" size="small">Create</AppButton>
     </div>
 
     <div>
