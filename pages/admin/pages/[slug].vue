@@ -3,8 +3,10 @@
     <h1 class="text-3xl font-bold mb-4">{{ page.title }}</h1>
 
     <div>
-      <div class="mt-16">
+      <div class="mt-8">
         <form @submit.prevent="updatePage()">
+          <h2 class="text-2xl font-semibold mb-4">Meta</h2>
+
           <div class="flex flex-col space-y-4 max-w-lg">
             <div class="flex flex-col shadow-sm space-y-2">
               <label class="text-lg font-medium" for>Slug</label>
@@ -25,6 +27,8 @@
               />
             </div>
 
+            <h2 class="text-2xl font-semibold mb-4">Hero</h2>
+
             <div class="flex flex-col shadow-sm space-y-2">
               <label class="text-lg font-medium" for>Hero title</label>
               <input
@@ -32,6 +36,26 @@
                 v-model="formData.data.hero.title"
                 type="text"
                 :placeholder="formData.data.hero.title"
+              />
+            </div>
+
+            <div class="flex flex-col shadow-sm space-y-2">
+              <label class="text-lg font-medium" for>Hero button</label>
+              <input
+                class="border border-blue-50 rounded px-3 py-2"
+                v-model="formData.data.hero.button"
+                type="text"
+                :placeholder="formData.data.hero.button"
+              />
+            </div>
+
+            <div class="flex flex-col shadow-sm space-y-2">
+              <label class="text-lg font-medium" for>Hero button alt</label>
+              <input
+                class="border border-blue-50 rounded px-3 py-2"
+                v-model="formData.data.hero.button_alt"
+                type="text"
+                :placeholder="formData.data.hero.button_alt"
               />
             </div>
           </div>
@@ -63,6 +87,8 @@ const formData = reactive({
   data: {
     hero: {
       title: page.value.data.hero.title,
+      button: page.value.data.hero.button,
+      button_alt: page.value.data.hero.button_alt,
     },
   },
 })
