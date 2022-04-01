@@ -1,26 +1,26 @@
 import { store } from '@/store/store.js'
 
-export default defineNuxtRouteMiddleware((to, from) => {
+export default defineNuxtRouteMiddleware(async (to, from) => {
 
-  const auth = store.user.token
+  const cookieToken = useCookie('token');
 
   async function checkToken() {
     const { data } = await useFetch('http://localhost:3333/api/v1/auth', {
       headers: {
-        Authorization: `Bearer ${auth}`,
+        Authorization: `Bearer ${cookieToken.value}`,
       }
-    })
+    });
 
-    if (data.value) {
-      store.user.validToken = true
+    if (data.value === 'true') {
+      return true;
     } else {
-      store.user.validToken = false
+      return false;
     }
-  }
+  };
 
-  if (!store.user.validToken) {
+  const canAccess = await checkToken()
+
+  if(!canAccess) {
     return navigateTo('/login')
   }
-
-  checkToken()
 })

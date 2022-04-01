@@ -52,6 +52,7 @@
 import { store } from "@/store/store";
 
 const user = useUser();
+const cookieToken = useCookie("token");
 
 function logger() {
   console.log(store.user);
@@ -74,6 +75,7 @@ async function login() {
     }).then((data) => {
       store.user.token = data.data.value.token;
       store.user.tokenType = data.data.value.type;
+      cookieToken.value = data.data.value.token;
     });
 
     await checkToken().then(() => {
@@ -87,12 +89,8 @@ async function login() {
 async function checkToken() {
   const { data } = await useFetch("http://localhost:3333/api/v1/auth", {
     headers: {
-      Authorization: `Bearer ${store.user.token}`,
+      Authorization: `Bearer ${cookieToken.value}`,
     },
   });
-
-  if (data.value) {
-    store.user.validToken = true;
-  }
 }
 </script>
