@@ -61,6 +61,10 @@
         @apply border-accent;
     }
 
+    .btn-transparent-alt {
+        @apply border-accent text-light-main;
+    }
+
     .btn-hover {
         @apply  transform hover:-translate-y-1 transition hover:shadow-xl;
     }
