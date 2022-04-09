@@ -11,7 +11,7 @@
       </div>
 
       <!-- Section content -->
-      <div class="grid grid-cols-2 gap-4 lg:gap-8 max-w-5xl w-full">
+      <div class="grid grid-cols-2 gap-8 lg:gap-12 max-w-5xl w-full">
         <!-- Service 1 -->
         <div
           class="flex flex-col justify-center items-center bg-light-main col-span-2 md:col-span-1 p-12 rounded-tl-3xl rounded-br-3xl anim-fade-in-up"
