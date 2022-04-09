@@ -3,7 +3,7 @@
     <div
       class="container mx-auto relative grid grid-cols-12 lg:gap-12 section-padding-x py-4 lg:py-6 items-center"
     >
-      <div class="col-span-8 lg:col-span-3 max-w-xs">
+      <div class="col-span-8 lg:col-span-3 w-60">
         <NuxtLink to="/">
           <AppLogo />
         </NuxtLink>
