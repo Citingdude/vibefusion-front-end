@@ -8,6 +8,10 @@
       <AdminNavigationLink to="/admin/pages">
         Pages
       </AdminNavigationLink>
+
+      <AdminNavigationLink to="/admin/cases">
+        Cases
+      </AdminNavigationLink>
     </div>
   </aside>
 </template>
