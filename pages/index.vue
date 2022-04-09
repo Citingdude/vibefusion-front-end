@@ -2,7 +2,7 @@
   <div>
     <HomeHero />
     <HomeDiensten />
-    <!-- <HomeCases /> -->
+    <HomeCases />
     <!-- <CallToAction /> -->
   </div>
 </template>
