@@ -42,16 +42,16 @@
             <h2 class="text-2xl font-semibold mb-4">Hero</h2>
 
             <div class="flex flex-col shadow-sm space-y-2">
-              <TipTap v-model="formDataTest.data.hero.title" />
+              <TipTap v-model="formDataTest.content.hero.title" />
             </div>
 
             <div class="flex flex-col shadow-sm space-y-2">
               <label class="text-lg font-medium" for>Hero button</label>
               <input
                 class="border border-blue-50 rounded px-3 py-2"
-                v-model="formDataTest.data.hero.button"
+                v-model="formDataTest.content.hero.button"
                 type="text"
-                :placeholder="formDataTest.data.hero.button"
+                :placeholder="formDataTest.content.hero.button"
               />
             </div>
 
@@ -59,9 +59,9 @@
               <label class="text-lg font-medium" for>Hero button alt</label>
               <input
                 class="border border-blue-50 rounded px-3 py-2"
-                v-model="formDataTest.data.hero.button_alt"
+                v-model="formDataTest.content.hero.button_alt"
                 type="text"
-                :placeholder="formDataTest.data.hero.button_alt"
+                :placeholder="formDataTest.content.hero.button_alt"
               />
             </div>
           </div>
@@ -93,11 +93,11 @@ const formDataTest = reactive({
   slug: page.value.slug,
   title: page.value.title,
   image: "",
-  data: {
+  content: {
     hero: {
-      title: page.value.data.hero.title,
-      button: page.value.data.hero.button,
-      button_alt: page.value.data.hero.button_alt,
+      title: page.value.content?.hero.title,
+      button: page.value.content?.hero.button,
+      button_alt: page.value.content?.hero.button_alt,
     },
   },
 })
@@ -112,7 +112,7 @@ async function updatePage() {
   formData.append("file", file.value.files[0])
   formData.append("slug", formDataTest.slug)
   formData.append("title", formDataTest.title)
-  formData.append("data", JSON.stringify(formDataTest.data))
+  formData.append("content", JSON.stringify(formDataTest.content))
 
   console.log(formData.get('file'));
 
