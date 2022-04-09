@@ -9,7 +9,7 @@
       <p class="font-body text-light-alt mb-8 text-base md:text-lg lg:text-xl">
         Heb je nood aan een nieuwe
         <NuxtLink to="/webdesign" class="text-accent link-hover-border ease-in">website</NuxtLink>,
-        <NuxtLink to="/webshop" class="text-accent link-hover-border">webshop</NuxtLink>of
+        <NuxtLink to="/webshop" class="text-accent link-hover-border">webshop </NuxtLink>of
         <NuxtLink to="/branding" class="text-accent link-hover-border">branding</NuxtLink>?
         <br />We helpen je graag verder met jouw toekomstige projecten!
       </p>
