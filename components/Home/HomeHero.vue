@@ -7,7 +7,7 @@
         <!-- Content -->
         <div class="col-span-2 lg:col-span-6 max-w-full items-center anim-fade-in-left">
           <!-- Heading -->
-          <div v-html="home[0].content.hero.title" class="hero__title text-7xl font-display mb-24"></div>
+          <div v-html="home[0].content.hero.title" class="hero__title text-6xl lg:text-7xl font-display mb-24"></div>
 
           <!-- Buttons -->
           <div class="flex flex-col md:flex-row items-center md:items-start gap-8">
