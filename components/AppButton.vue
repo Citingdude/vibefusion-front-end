@@ -67,6 +67,8 @@ const getColor = computed(() => {
       return 'btn-alt'
     case 'transparent':
       return 'btn-transparent'
+    case 'transparent-alt':
+      return "btn-transparent-alt"
   }
 })
 
