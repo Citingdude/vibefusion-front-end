@@ -12,7 +12,7 @@
               <label class="text-lg font-medium" for>Slug</label>
               <input
                 class="border border-blue-50 rounded px-3 py-2"
-                v-model="formDataTest.slug"
+                v-model="formDataHome.slug"
                 type="text"
               />
             </div>
@@ -21,7 +21,7 @@
               <label class="text-lg font-medium" for>Title</label>
               <input
                 class="border border-blue-50 rounded px-3 py-2"
-                v-model="formDataTest.title"
+                v-model="formDataHome.title"
                 type="text"
                 :placeholder="page.title"
               />
@@ -42,16 +42,16 @@
             <h2 class="text-2xl font-semibold mb-4">Hero</h2>
 
             <div class="flex flex-col shadow-sm space-y-2">
-              <TipTap v-model="formDataTest.content.hero.title" />
+              <TipTap v-model="formDataHome.content.hero.title" />
             </div>
 
             <div class="flex flex-col shadow-sm space-y-2">
               <label class="text-lg font-medium" for>Hero button</label>
               <input
                 class="border border-blue-50 rounded px-3 py-2"
-                v-model="formDataTest.content.hero.button"
+                v-model="formDataHome.content.hero.button"
                 type="text"
-                :placeholder="formDataTest.content.hero.button"
+                :placeholder="formDataHome.content.hero.button"
               />
             </div>
 
@@ -59,9 +59,9 @@
               <label class="text-lg font-medium" for>Hero button alt</label>
               <input
                 class="border border-blue-50 rounded px-3 py-2"
-                v-model="formDataTest.content.hero.button_alt"
+                v-model="formDataHome.content.hero.button_alt"
                 type="text"
-                :placeholder="formDataTest.content.hero.button_alt"
+                :placeholder="formDataHome.content.hero.button_alt"
               />
             </div>
           </div>
@@ -89,7 +89,7 @@ definePageMeta({
 
 const file = ref(null)
 
-const formDataTest = reactive({
+const formDataHome = reactive({
   slug: page.value.slug,
   title: page.value.title,
   image: "",
@@ -110,9 +110,9 @@ async function updatePage() {
   var formData = new FormData();
 
   formData.append("file", file.value.files[0])
-  formData.append("slug", formDataTest.slug)
-  formData.append("title", formDataTest.title)
-  formData.append("content", JSON.stringify(formDataTest.content))
+  formData.append("slug", formDataHome.slug)
+  formData.append("title", formDataHome.title)
+  formData.append("content", JSON.stringify(formDataHome.content))
 
   console.log(formData.get('file'));
 
