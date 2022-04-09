@@ -3,7 +3,7 @@
     <HomeHero />
     <HomeDiensten />
     <HomeCases />
-    <!-- <CallToAction /> -->
+    <HomeCta />
   </div>
 </template>
 
