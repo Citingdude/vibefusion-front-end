@@ -16,7 +16,7 @@
         <span v-html="summary"></span>
       </p>
 
-      <AppButton color="transparent" :to="buttonLink">Lees de volledige case</AppButton>
+      <AppButton color="transparent" :to="link">Lees de volledige case</AppButton>
     </div>
   </div>
 </template>
