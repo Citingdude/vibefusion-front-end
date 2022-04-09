@@ -33,10 +33,12 @@
         >
           <IconsWebdesign />
 
-          <h3 class="font-display font-bold text-3xl my-8">Webdesign</h3>
+          <h3 class="font-display font-bold text-3xl my-8">
+            {{ home?.content.services.service_1.title }}
+          </h3>
 
           <ButtonsButtonLargeAlt
-            text="Meer info"
+            :text="home?.content.services.service_1.button"
             :link="{ path: '/', hash: '#onze-diensten' }"
           />
         </div>
@@ -56,10 +58,12 @@
         >
           <IconsWebshop />
 
-          <h3 class="font-display font-bold text-3xl my-8">Webshop</h3>
+          <h3 class="font-display font-bold text-3xl my-8">
+            {{ home?.content.services.service_2.title }}
+          </h3>
 
           <ButtonsButtonLargeAlt
-            text="Meer info"
+            :text="home?.content.services.service_2.button"
             :link="{ path: '/', hash: '#onze-diensten' }"
           />
         </div>
@@ -79,10 +83,12 @@
         >
           <IconsBranding />
 
-          <h3 class="font-display font-bold text-3xl my-8">Branding</h3>
+          <h3 class="font-display font-bold text-3xl my-8">
+            {{ home?.content.services.service_3.title }}
+          </h3>
 
           <ButtonsButtonLargeAlt
-            text="Meer info"
+            :text="home?.content.services.service_3.button"
             :link="{ path: '/', hash: '#onze-diensten' }"
           />
         </div>
@@ -109,11 +115,11 @@
               text-light-main
             "
           >
-            Samenwerken?
+            {{ home?.content.services.cta.title }}
           </h3>
 
           <ButtonsButtonLargeMain
-            text="Contacteer ons"
+            :text="home?.content.services.cta.button"
             :link="{ path: '/', hash: '#onze-diensten' }"
           />
         </div>
@@ -123,7 +129,9 @@
 </template>
 
 <script setup>
-const { data: home } = await useAsyncData("home", () =>
-  $fetch("http://localhost:3333/api/v1/pages")
+const { data } = await useAsyncData("home", () =>
+  $fetch("http://localhost:3333/api/v1/pages/home")
 );
+
+const home = data.value[0];
 </script>
