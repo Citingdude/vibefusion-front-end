@@ -5,7 +5,7 @@
     >
       <!-- Section title -->
       <div class="flex flex-col items-center mb-8">
-        <h2 class="text-2xl lg:text-5xl font-bold font-display mb-4">Onze diensten</h2>
+        <h2 class="text-4xl lg:text-5xl font-bold font-display mb-4">Onze diensten</h2>
 
         <IconsLine />
       </div>
