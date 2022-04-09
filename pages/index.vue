@@ -1,9 +1,9 @@
 <template>
   <div>
     <HomeHero />
-    <!-- <HomeDiensten />
-    <HomeCases />
-    <CallToAction /> -->
+    <HomeDiensten />
+    <!-- <HomeCases /> -->
+    <!-- <CallToAction /> -->
   </div>
 </template>
 
