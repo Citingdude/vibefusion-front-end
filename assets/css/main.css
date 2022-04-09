@@ -69,10 +69,6 @@
         @apply  transform hover:-translate-y-1 transition hover:shadow-xl;
     }
 
-    .badge {
-        @apply bg-dark-300 text-light-main max-w-max py-1 px-2 rounded-tl-lg rounded-br-lg font-body;
-    }
-
     .link-hover {
         @apply transition hover:text-accent ease-in;
     }
