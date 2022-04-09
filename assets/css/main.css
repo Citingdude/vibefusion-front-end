@@ -35,31 +35,44 @@
 @layer components {
     .btn-sm {
         @apply py-2 px-4 border font-display text-base font-bold;
-    },
+    }
+
     .btn-md {
         @apply py-4 px-5 border-2 font-display text-lg font-bold rounded-tl-lg rounded-br-lg;
     }
+
+    .btn-lg {
+        @apply py-6 px-8 border-4 font-display text-xl font-bold rounded-tl-lg rounded-br-lg;
+    }
+
     .btn-m {
         @apply py-4 px-5 border-2 font-display text-lg font-bold;
-    },
+    }
+
     .btn-accent {
         @apply border-accent bg-accent text-light-main;
-    },
+    }
+
     .btn-alt {
         @apply bg-light-alt text-accent border-light-main hover:border-accent;
     }
+
     .btn-transparent {
         @apply border-accent;
     }
+
     .btn-hover {
         @apply  transform hover:-translate-y-1 transition hover:shadow-xl;
     }
+
     .badge {
         @apply bg-dark-300 text-light-main max-w-max py-1 px-2 rounded-tl-lg rounded-br-lg font-body;
     }
+
     .link-hover {
         @apply transition hover:text-accent ease-in;
     }
+
     .link-hover-border {
         @apply border-b-2 border-accent border-opacity-0 hover:border-opacity-100 transition ease-in;
     }
