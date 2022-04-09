@@ -23,7 +23,7 @@
         </div>
 
         <div class="col-span-2 lg:col-span-6 anim-fade-in-right">
-          <img width="100%" height="auto" src="~/assets/images/home-hero.svg" alt="Hero" />
+          <IllustrationsHomeHero />
         </div>
       </div>
     </div>
