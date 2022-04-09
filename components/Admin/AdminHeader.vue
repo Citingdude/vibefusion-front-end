@@ -9,7 +9,6 @@
     </div>
 
     <div class="space-x-4 flex w-1/2 justify-end items-center">
-      <AppButton to="/login" size="small">Login</AppButton>
       <AppButton
         @click="logout()"
         :button="true"
