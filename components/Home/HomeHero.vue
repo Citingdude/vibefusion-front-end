@@ -7,13 +7,20 @@
         <!-- Content -->
         <div class="col-span-2 lg:col-span-6 max-w-full items-center anim-fade-in-left">
           <!-- Heading -->
-          <div v-html="home[0].content.hero.title" class="hero__title text-6xl lg:text-7xl font-display mb-16 lg:mb-24"></div>
+          <div
+            v-html="home.content.hero.title"
+            class="text-6xl lg:text-7xl font-display mb-16 lg:mb-24"
+          ></div>
 
           <!-- Buttons -->
           <div class="flex flex-col md:flex-row items-center md:items-start gap-8">
-            <AppButton hashlink="onze-diensten" size="large">Onze diensten</AppButton>
+            <AppButton hashlink="onze-diensten" size="large">{{ home.content.hero.button }}</AppButton>
 
-            <AppButton hashlink="cases" size="large" color="transparent">Bekijk de cases</AppButton>
+            <AppButton
+              hashlink="cases"
+              size="large"
+              color="transparent"
+            >{{ home.content.hero.button_alt }}</AppButton>
           </div>
         </div>
 
@@ -27,12 +34,11 @@
 </template>
 
 <script setup>
-const { data: home } = await useAsyncData('home', () => $fetch('http://localhost:3333/api/v1/pages'))
+defineProps({
+  home: {
+    type: Object,
+    default: () => { }
+  }
+})
 
 </script>
-
-<style>
-.hero__title > p {
-  font-weight: normal;
-}
-</style>

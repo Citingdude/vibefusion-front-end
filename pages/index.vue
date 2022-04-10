@@ -1,6 +1,6 @@
 <template>
   <div>
-    <HomeHero />
+    <HomeHero :home="home" />
     <HomeDiensten />
     <HomeCases />
     <HomeCta :home="home" />
