@@ -24,10 +24,10 @@ const eventType = computed(() => {
       return props.editor.chain().focus().toggleBold().run()
 
     case 'h1':
-      return props.editor.chain().focus().setHeading({ level: 1 }).run()
+      return props.editor.chain().focus().toggleHeading({ level: 1 }).run()
 
     case 'h2':
-      return props.editor.chain().focus().setHeading({ level: 2 }).run()
+      return props.editor.chain().focus().toggleHeading({ level: 2 }).run()
   }
 })
 
