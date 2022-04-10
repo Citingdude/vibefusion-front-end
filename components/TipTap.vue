@@ -37,3 +37,13 @@ const editor = useEditor({
   onUpdate: updateEditor
 })
 </script>
+
+<style>
+.ProseMirror h1 {
+  @apply text-3xl;
+}
+
+.ProseMirror h2 {
+  @apply text-2xl;
+}
+</style>
