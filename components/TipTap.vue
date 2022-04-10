@@ -1,8 +1,8 @@
 <template>
-  <div>
-    <button v-on:click="editor.chain().focus().toggleBold().run()">Bold</button>
-    <button v-on:click="editor.chain().focus().setHeading({ level: 1 }).run()">H1</button>
-    <button v-on:click="editor.chain().focus().setHeading({ level: 2 }).run()">H2</button>
+  <div class="flex gap-2">
+    <TipTapButton :editor="editor" clickEvent="bold">Bold</TipTapButton>
+    <TipTapButton :editor="editor" clickEvent="h1">H1</TipTapButton>
+    <TipTapButton :editor="editor" clickEvent="h2">H2</TipTapButton>
   </div>
   <editor-content
     class="border border-blue-50 rounded px-3 py-2"
