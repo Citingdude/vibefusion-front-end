@@ -220,6 +220,37 @@
             </div>
           </div>
 
+          <!-- Cta banner -->
+          <div>
+            <h2 class="text-2xl font-semibold mb-4">Cta banner</h2>
+
+            <div class="flex flex-col space-y-4 max-w-lg">
+              <div class="flex flex-col shadow-sm space-y-2">
+                <TipTap v-model="formDataHome.content.cta_banner.title" />
+              </div>
+
+              <div class="flex flex-col shadow-sm space-y-2">
+                <label class="text-lg font-medium" for>Hero button</label>
+                <input
+                  class="border border-blue-50 rounded px-3 py-2"
+                  v-model="formDataHome.content.hero.button"
+                  type="text"
+                  :placeholder="formDataHome.content.hero.button"
+                />
+              </div>
+
+              <div class="flex flex-col shadow-sm space-y-2">
+                <label class="text-lg font-medium" for>Hero button alt</label>
+                <input
+                  class="border border-blue-50 rounded px-3 py-2"
+                  v-model="formDataHome.content.hero.button_alt"
+                  type="text"
+                  :placeholder="formDataHome.content.hero.button_alt"
+                />
+              </div>
+            </div>
+          </div>
+
           <!-- Save button -->
           <div class="mt-8">
             <AppButton type="submit" button size="small">Save</AppButton>
@@ -236,7 +267,7 @@ import { ref, reactive } from "vue";
 const route = useRoute();
 
 const { data: page } = await useFetch(
-  `http://localhost:3333/api/v1/pages/${route.params.slug}`
+  `http://localhost:3333/api/v1/pages/home`
 );
 
 definePageMeta({
@@ -275,6 +306,11 @@ const formDataHome = reactive({
         button: page.value.content?.services.cta.button,
       },
     },
+    cta_banner: {
+      title: page.value.content?.cta_banner.title,
+      body: page.value.content?.cta_banner.body,
+      button: page.value.content?.cta_banner.button
+    }
   },
 });
 
@@ -291,7 +327,7 @@ async function updatePage() {
   formData.append("content", JSON.stringify(formDataHome.content));
 
   const { data, refresh } = await useFetch(
-    `http://localhost:3333/api/v1/pages/${route.params.slug}`,
+    `http://localhost:3333/api/v1/pages/home`,
     {
       method: "PATCH",
       body: formData,
