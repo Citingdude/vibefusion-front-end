@@ -1,7 +1,7 @@
 <template>
   <div>
     <HomeHero :home="home" />
-    <HomeDiensten />
+    <HomeDiensten :home="home" />
     <HomeCases />
     <HomeCta :home="home" />
   </div>

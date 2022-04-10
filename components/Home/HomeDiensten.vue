@@ -70,9 +70,10 @@
 </template>
 
 <script setup>
-const { data } = await useAsyncData("home", () =>
-  $fetch("http://localhost:3333/api/v1/pages/home")
-);
-
-const home = data.value[0];
+defineProps({
+  home: {
+    type: Object,
+    default: () => {}
+  }
+})
 </script>
