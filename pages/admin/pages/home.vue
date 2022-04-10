@@ -230,22 +230,22 @@
               </div>
 
               <div class="flex flex-col shadow-sm space-y-2">
-                <label class="text-lg font-medium" for>Hero button</label>
+                <label class="text-lg font-medium" for>Body</label>
                 <input
                   class="border border-blue-50 rounded px-3 py-2"
-                  v-model="formDataHome.content.hero.button"
+                  v-model="formDataHome.content.cta_banner.body"
                   type="text"
-                  :placeholder="formDataHome.content.hero.button"
+                  :placeholder="formDataHome.content.cta_banner.body"
                 />
               </div>
 
               <div class="flex flex-col shadow-sm space-y-2">
-                <label class="text-lg font-medium" for>Hero button alt</label>
+                <label class="text-lg font-medium" for>Button</label>
                 <input
                   class="border border-blue-50 rounded px-3 py-2"
-                  v-model="formDataHome.content.hero.button_alt"
+                  v-model="formDataHome.content.cta_banner.button"
                   type="text"
-                  :placeholder="formDataHome.content.hero.button_alt"
+                  :placeholder="formDataHome.content.cta_banner.button"
                 />
               </div>
             </div>
