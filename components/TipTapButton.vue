@@ -28,6 +28,9 @@ const eventType = computed(() => {
 
     case 'h2':
       return props.editor.chain().focus().toggleHeading({ level: 2 }).run()
+
+    case 'accent':
+      return props.editor.chain().focus().setColor('#6666cc').run()
   }
 })
 

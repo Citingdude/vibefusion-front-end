@@ -3,6 +3,7 @@
     <TipTapButton :editor="editor" clickEvent="bold">Bold</TipTapButton>
     <TipTapButton :editor="editor" clickEvent="h1">H1</TipTapButton>
     <TipTapButton :editor="editor" clickEvent="h2">H2</TipTapButton>
+    <TipTapButton :editor="editor" clickEvent="accent">Accent</TipTapButton>
   </div>
   <editor-content
     class="border border-blue-50 rounded px-3 py-2"
@@ -14,6 +15,8 @@
 <script setup>
 import { useEditor, EditorContent } from '@tiptap/vue-3'
 import StarterKit from '@tiptap/starter-kit'
+import TextStyle from '@tiptap/extension-text-style'
+import Color from '@tiptap/extension-color'
 
 const emit = defineEmits(['update:modelValue'])
 
@@ -32,6 +35,8 @@ const editor = useEditor({
   content: props.modelValue,
   extensions: [
     StarterKit,
+    TextStyle,
+    Color,
   ],
 
   onUpdate: updateEditor
