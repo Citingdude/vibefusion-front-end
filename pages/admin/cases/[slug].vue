@@ -58,24 +58,18 @@
                 <label class="text-lg font-medium" for>Image</label>
                 <input
                   class="border border-blue-50 rounded px-3 py-2"
-                  v-model="formDataCase.image"
-                  type="text"
-                  :placeholder="casePage.image"
-                />
-              </div>
-
-              <!-- Image -->
-              <!-- <div class="flex flex-col shadow-sm space-y-2">
-                <label class="text-lg font-medium" for>Image</label>
-                <input
-                  class="border border-blue-50 rounded px-3 py-2"
                   type="file"
                   id="file"
                   ref="file"
                   v-on:change="handleFileUpload()"
-                  :placeholder="casePage.image"
                 />
-              </div>-->
+
+                <div>
+                  {{ formDataCase.image }}
+
+                  <img :src="`http://localhost:3333/uploads/${formDataCase.image}`" alt="">
+                </div>
+              </div>
             </div>
           </div>
 
@@ -124,7 +118,7 @@ function handleFileUpload() {
 async function updatePage() {
   var formData = new FormData();
 
-  // formData.append("file", file.value.files[0]);
+  formData.append("featured_image", file.value.files[0]);
   formData.append("slug", formDataCase.slug)
   formData.append("category", formDataCase.category)
   formData.append("title", formDataCase.title)
@@ -140,6 +134,6 @@ async function updatePage() {
     }
   );
 
-  refresh();
+  refresh()
 }
 </script>
