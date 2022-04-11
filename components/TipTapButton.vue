@@ -31,6 +31,9 @@ const eventType = computed(() => {
 
     case 'accent':
       return props.editor.chain().focus().setColor('#6666cc').run()
+
+    case 'unsetColor':
+      return props.editor.chain().focus().unsetColor().run()
   }
 })
 

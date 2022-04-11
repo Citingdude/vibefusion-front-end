@@ -3,7 +3,8 @@
     <TipTapButton :editor="editor" clickEvent="bold">Bold</TipTapButton>
     <TipTapButton :editor="editor" clickEvent="h1">H1</TipTapButton>
     <TipTapButton :editor="editor" clickEvent="h2">H2</TipTapButton>
-    <TipTapButton :editor="editor" clickEvent="accent">Accent</TipTapButton>
+    <TipTapButton :editor="editor" clickEvent="accent">Accent</TipTapButton> 
+    <TipTapButton :editor="editor" clickEvent="unsetColor">Unset color</TipTapButton>
   </div>
   <editor-content
     class="border border-blue-50 rounded px-3 py-2"
