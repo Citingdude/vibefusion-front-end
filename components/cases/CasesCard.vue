@@ -13,7 +13,7 @@
       <h3 class="font-display font-bold text-2xl lg:text-3xl text-dark-400 my-6">{{ title }}</h3>
 
       <p v-if="summary" class="mb-12 text-dark-300 font-body text-base md:text-lg lg:text-xl max-w-lg">
-        <span v-html="summary"></span>
+        <div v-html="summary"></div>
       </p>
 
       <AppButton color="transparent" :to="link">Lees de volledige case</AppButton>
