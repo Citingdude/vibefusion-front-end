@@ -45,12 +45,8 @@
               <!-- Description -->
               <div class="flex flex-col shadow-sm space-y-2">
                 <label class="text-lg font-medium" for>Description</label>
-                <input
-                  class="border border-blue-50 rounded px-3 py-2"
-                  v-model="formDataCase.description"
-                  type="text"
-                  :placeholder="casePage.description"
-                />
+
+                <TipTap v-model="formDataCase.description" />
               </div>
 
               <!-- Image -->
