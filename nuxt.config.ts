@@ -2,6 +2,10 @@ import { defineNuxtConfig } from 'nuxt3'
 
 // https://v3.nuxtjs.org/docs/directory-structure/nuxt.config
 export default defineNuxtConfig({
+  publicRuntimeConfig: {
+    apiBase: process.env.API_BASE
+  },
+
   build: {
     postcss: {
       postcssOptions: {
@@ -16,5 +20,5 @@ export default defineNuxtConfig({
 
   css: [
     '@/assets/css/main.css'
-  ]
+  ],
 })
