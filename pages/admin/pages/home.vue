@@ -260,10 +260,13 @@
 <script setup>
 import { ref, reactive } from "vue";
 
+const runtimeConfig = useRuntimeConfig()
+const apiBase = runtimeConfig.apiBase
+
 const route = useRoute();
 
 const { data: page } = await useFetch(
-  `http://localhost:3333/api/v1/pages/home`
+  `${apiBase}/pages/home`
 );
 
 definePageMeta({
@@ -323,7 +326,7 @@ async function updatePage() {
   formData.append("content", JSON.stringify(formDataHome.content));
 
   const { data, refresh } = await useFetch(
-    `http://localhost:3333/api/v1/pages/home`,
+    `${apiBase}/pages/home`,
     {
       method: "PATCH",
       body: formData,

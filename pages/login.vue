@@ -51,6 +51,9 @@
 <script setup>
 import { store } from "@/store/store";
 
+const runtimeConfig = useRuntimeConfig()
+const apiBase = runtimeConfig.apiBase
+
 const user = useUser();
 const cookieToken = useCookie("token");
 
@@ -69,7 +72,7 @@ const formData = reactive({
 
 async function login() {
   try {
-    const data = await useFetch("http://localhost:3333/api/v1/login", {
+    const data = await useFetch(`${apiBase}/login`, {
       method: "POST",
       body: formData,
     }).then((data) => {
@@ -87,7 +90,7 @@ async function login() {
 }
 
 async function checkToken() {
-  const { data } = await useFetch("http://localhost:3333/api/v1/auth", {
+  const { data } = await useFetch(`${apiBase}/auth`, {
     headers: {
       Authorization: `Bearer ${cookieToken.value}`,
     },

@@ -17,12 +17,15 @@
 <script setup>
 import { ref, reactive } from "vue"
 
+const runtimeConfig = useRuntimeConfig()
+const apiBase = runtimeConfig.apiBase
+
 definePageMeta({
   layout: "admin",
   middleware: 'auth'
 })
 
-const { data: pages, refresh } = await useFetch("http://localhost:3333/api/v1/pages")
+const { data: pages, refresh } = await useFetch(`${apiBase}/pages`)
 
 const formData = reactive({
   slug: "",
@@ -35,7 +38,7 @@ const formData = reactive({
 })
 
 function sendForm() {
-  useFetch("http://localhost:3333/api/v1/pages", {
+  useFetch(`${apiBase}/pages`, {
     method: "POST",
     body: formData,
   })

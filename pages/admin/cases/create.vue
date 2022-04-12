@@ -88,6 +88,9 @@
 <script setup>
 import { ref, reactive } from "vue"
 
+const runtimeConfig = useRuntimeConfig()
+const apiBase = runtimeConfig.apiBase
+
 definePageMeta({
   layout: "admin",
   middleware: 'auth'
@@ -107,7 +110,7 @@ function sendForm() {
   try {
     console.log(formDataCase)
 
-    useFetch("http://localhost:3333/api/v1/cases", {
+    useFetch(`${apiBase}/cases`, {
       method: "POST",
       body: formDataCase,
     })

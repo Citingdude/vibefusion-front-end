@@ -5,6 +5,10 @@
 </template>
 
 <script setup>
+
+const runtimeConfig = useRuntimeConfig()
+const apiBase = runtimeConfig.apiBase
+
 definePageMeta({
   layout: "admin",
   middleware: 'auth'
@@ -13,7 +17,7 @@ definePageMeta({
 const { 
   data: home 
 } = await useFetch(
-  'http://localhost:3333/api/v1/pages/home', 
+  `${apiBase}/pages/home`, 
   { pick: 
       [
         'title', 
