@@ -4,8 +4,11 @@ export default defineNuxtRouteMiddleware(async (to, from) => {
 
   const cookieToken = useCookie('token');
 
+  const runtimeConfig = useRuntimeConfig()
+  const apiBase = runtimeConfig.apiBase
+
   async function checkToken() {
-    const { data } = await useFetch('http://localhost:3333/api/v1/auth', {
+    const { data } = await useFetch(`${apiBase}/auth`, {
       headers: {
         Authorization: `Bearer ${cookieToken.value}`,
       }
