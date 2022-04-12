@@ -8,7 +8,10 @@
 </template>
 
 <script setup>
+const runtimeConfig = useRuntimeConfig()
+const apiBase = runtimeConfig.apiBase
+
 const { data:home } = await useAsyncData("home", () =>
-  $fetch("http://localhost:3333/api/v1/pages/home")
+  $fetch(`${apiBase}/pages/home`)
 );
 </script>

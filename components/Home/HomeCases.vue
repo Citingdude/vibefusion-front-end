@@ -27,8 +27,11 @@
 </template>
 
 <script setup>
+const runtimeConfig = useRuntimeConfig()
+const apiBase = runtimeConfig.apiBase
+
 const { data } = await useAsyncData("cases", () =>
-  $fetch("http://localhost:3333/api/v1/cases")
+  $fetch(`${apiBase}/cases`)
 );
 
 const cases = data.value.slice(0, 2)
