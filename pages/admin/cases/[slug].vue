@@ -63,7 +63,7 @@
                 <div>
                   {{ formDataCase.image }}
 
-                  <img :src="`http://localhost:3333/uploads/${formDataCase.image}`" alt="">
+                  <img :src="`${baseUrl}/uploads/${formDataCase.image}`" alt="">
                 </div>
               </div>
             </div>
@@ -86,6 +86,7 @@ import { ref, reactive } from "vue";
 
 const runtimeConfig = useRuntimeConfig()
 const apiBase = runtimeConfig.apiBase
+const baseUrl = runtimeConfig.baseUrl
 
 const route = useRoute();
 
@@ -132,6 +133,9 @@ async function updatePage() {
       body: formData,
     }
   );
+
+  console.log('test')
+  console.log(data)
 
   refresh()
 }
