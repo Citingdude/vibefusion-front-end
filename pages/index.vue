@@ -1,7 +1,7 @@
 <template>
   <div>
     <HomeHero :home="home.data.attributes" />
-    <!-- <HomeDiensten /> -->
+    <HomeDiensten :home=home.data.attributes />
     <!-- <HomeCases /> -->
     <!-- <HomeCta /> -->
   </div>
