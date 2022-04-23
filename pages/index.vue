@@ -29,6 +29,4 @@ const query = qs.stringify(
 const { data: home } = await useAsyncData("home", () =>
   $fetch(`${apiBase}/homepage?${query}`)
 );
-
-console.log(home)
 </script>
