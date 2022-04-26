@@ -13,11 +13,11 @@
         <CasesCard
           v-for="(casePage, index) in cases"
           :key="casePage.id"
-          :badgeText="casePage.category"
-          :title="casePage.title"
-          :summary="casePage.description"
-          :image="'https://vibefusion-demo.be/wp-content/uploads/2021/11/Mockups-s-v2.jpg'"
-          :link="`/cases/${casePage.slug}`"
+          :badgeText="casePage.attributes.category.data.attributes.Title"
+          :title="casePage.attributes.Title"
+          :summary="casePage.attributes.summary"
+          :image="`${baseUrl}${casePage.attributes.Image.data.attributes.url}`"
+          :link="`/cases/${casePage.attributes.slug}`"
           :imageOrder="{'order-2': index % 2 === 0}"
           :contentOrder="{'order-1': index % 2 === 0}"
         />
@@ -27,12 +27,13 @@
 </template>
 
 <script setup>
-const runtimeConfig = useRuntimeConfig()
-const apiBase = runtimeConfig.apiBase
+const runtimeConfig = useRuntimeConfig();
+const baseUrl = runtimeConfig.baseUrl
 
-const { data } = await useAsyncData("cases", () =>
-  $fetch(`${apiBase}/cases`)
-);
-
-const cases = data.value.slice(0, 2)
+const props = defineProps({
+  cases: {
+    type: Object,
+    default: () => {},
+  },
+});
 </script>
