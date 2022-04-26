@@ -4,20 +4,35 @@
       <!-- Heading -->
       <div class="flex flex-col mb-4">
         <div
-          v-html="home.content.cta_banner.title"
-          class="text-3xl md:text-4xl lg:text-5xl font-bold font-display mb-3 text-light-main"
+          v-html="home.cta.title"
+          class="
+            text-3xl
+            md:text-4xl
+            lg:text-5xl
+            font-bold font-display
+            mb-3
+            text-light-main
+          "
         ></div>
       </div>
 
       <!-- Body -->
       <div
-        v-html="home.content.cta_banner.body"
-        class="font-body text-light-alt mb-8 text-base md:text-lg lg:text-xl max-w-xl"
+        v-html="home.cta.body"
+        class="
+          font-body
+          text-light-alt
+          mb-8
+          text-base
+          md:text-lg
+          lg:text-xl
+          max-w-xl
+        "
       ></div>
 
       <!-- Button -->
-      <AppButton color="transparent-alt" to="contact">
-        {{ home.content.cta_banner.button }}
+      <AppButton color="transparent-alt" :to="home.cta.button.url">
+        {{ home.cta.button.title }}
       </AppButton>
     </div>
   </section>
@@ -27,7 +42,7 @@
 defineProps({
   home: {
     type: Object,
-    default: () => { }
-  }
-})
+    default: () => {},
+  },
+});
 </script>
