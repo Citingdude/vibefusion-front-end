@@ -3,7 +3,7 @@
     <HomeHero :home="home.data.attributes" />
     <HomeDiensten :home="home.data.attributes" />
     <!-- <HomeCases /> -->
-    <!-- <HomeCta /> -->
+    <HomeCta :home="home.data.attributes" />
   </div>
 </template>
 
@@ -21,7 +21,10 @@ const query = qs.stringify(
       "Hero.button_alt",
 
       "services",
-      "services.cta"
+      "services.cta",
+
+      "cta",
+      "cta.button",
     ],
   },
   {
