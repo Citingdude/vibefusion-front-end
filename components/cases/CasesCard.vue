@@ -12,9 +12,9 @@
 
       <h3 class="font-display font-bold text-2xl lg:text-3xl text-dark-400 my-6">{{ title }}</h3>
 
-      <p v-if="summary" class="mb-12 text-dark-300 font-body text-base md:text-lg lg:text-xl max-w-lg">
-        <div v-html="summary"></div>
-      </p>
+      <div v-if="summary" class="mb-12 text-dark-300 font-body text-base md:text-lg lg:text-xl max-w-lg">
+        <p v-html="summary"></p>
+      </div>
 
       <AppButton color="transparent" :to="link">Lees de volledige case</AppButton>
     </div>
