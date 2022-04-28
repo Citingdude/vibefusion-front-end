@@ -1,6 +1,5 @@
 <template>
   <div
-    v-if="(props.color = 'light')"
     class="
       flex flex-col
       justify-center
@@ -78,7 +77,7 @@ const getBorders = computed(() => {
   }
 });
 
-const getColor= computed(() => {
+const getColor = computed(() => {
   switch (props.color) {
     case "light":
       return "bg-light-main"
