@@ -9,7 +9,7 @@
         Scoor online met een conversiegerichte website
       </h1>
 
-      <p class="mb-12">
+      <p class="mb-12 text-lg">
         Een professionele business website wordt een steeds belangrijker
         digitaal kanaal dat voor klanten zorgt. Start vandaag nog met de
         digitalisering van je bedrijf en zorg er voor dat jouw klanten je ook
@@ -27,7 +27,7 @@
 
     <!-- Illustration -->
     <div>
-      <img src="~/assets/images/webdesign-illustratie.svg" alt="" />
+      <img class="max-w-lg" src="~/assets/images/webdesign-illustratie.svg" alt="" />
     </div>
   </section>
 
