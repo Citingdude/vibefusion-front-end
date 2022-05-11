@@ -35,7 +35,7 @@
   <section class="pt-16 lg:pt-32 pb-20 lg:pb-40 section-padding-x bg-light-alt">
     <div class="container mx-auto">
       <!-- Heading -->
-      <div class="flex flex-col items-center w-full mb-8">
+      <div class="flex flex-col items-center w-full mb-16">
         <h2 class="text-4xl lg:text-5xl font-bold font-display mb-4">
           Waarom VibeFusion?
         </h2>
