@@ -70,10 +70,14 @@
         <FeaturesCard
           icon="phone"
           title="Mobielvriendelijk"
-          body="Een mobielvriendelijke website is tegenwoordig een must. Wanneer je website niet mobielvriendelijk is, zal Google je genadeloos straffen in de vindbaarheid van je website. Daarom bouwen we elke website op met de nieuwste responsieve technieken.
-"
+          body="Een mobielvriendelijke website is tegenwoordig een must. Wanneer je website niet mobielvriendelijk is, zal Google je genadeloos straffen in de vindbaarheid van je website. Daarom bouwen we elke website op met de nieuwste responsieve technieken."
         />
-        <FeaturesCard type="cta" color="dark" title="Samenwerken?" />
+        <FeaturesCard
+          type="cta"
+          color="dark"
+          title="Samenwerken?"
+          borders="tl-br"
+        />
       </div>
     </div>
   </section>
