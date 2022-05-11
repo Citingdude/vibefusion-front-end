@@ -27,7 +27,11 @@
 
     <!-- Illustration -->
     <div>
-      <img class="max-w-lg" src="~/assets/images/webdesign-illustratie.svg" alt="" />
+      <img
+        class="max-w-lg"
+        src="~/assets/images/webdesign-illustratie.svg"
+        alt=""
+      />
     </div>
   </section>
 
@@ -81,6 +85,55 @@
       </div>
     </div>
   </section>
+
+  <!-- Projects -->
+  <section class="pt-16 lg:pt-32 pb-20 lg:pb-40 section-padding-x">
+    <div class="container mx-auto">
+      <!-- Heading -->
+      <div class="flex flex-col items-center w-full mb-16">
+        <h2 class="text-4xl lg:text-5xl font-bold font-display mb-4">
+          Recente projecten
+        </h2>
+
+        <IconsLine />
+      </div>
+
+      <!-- Cases -->
+      <div>
+        <CasesCard
+          v-for="(casePage, index) in cases"
+          :key="casePage.id"
+          :badgeText="casePage.attributes.category.data.attributes.Title"
+          :title="casePage.attributes.Title"
+          :summary="casePage.attributes.summary"
+          :image="`${baseUrl}${casePage.attributes.Image.data.attributes.url}`"
+          :link="`/cases/${casePage.attributes.slug}`"
+          :imageOrder="{ 'order-2': index % 2 === 0 }"
+          :contentOrder="{ 'order-1': index % 2 === 0 }"
+        />
+      </div>
+    </div>
+  </section>
 </template>
 
-<script setup></script>
+<script setup>
+import * as qs from "qs";
+
+const runtimeConfig = useRuntimeConfig();
+const apiBase = runtimeConfig.apiBase;
+
+const caseQuery = qs.stringify(
+  {
+    populate: "*",
+  },
+  {
+    encodeValuesOnly: true,
+  }
+);
+
+const { data } = await useAsyncData("cases", () =>
+  $fetch(`${apiBase}/cases?${caseQuery}`)
+);
+
+const cases = data.value.data.slice(0, 2);
+</script>
