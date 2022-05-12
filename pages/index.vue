@@ -12,7 +12,7 @@
           >
             <!-- Heading -->
             <div
-              v-html="home?.data.attributes.Hero?.Title"
+              v-html="home?.Hero?.Title"
               class="text-6xl lg:text-7xl font-display mb-16 lg:mb-24"
             ></div>
 
@@ -21,11 +21,11 @@
               class="flex flex-col md:flex-row items-center md:items-start gap-8"
             >
               <AppButton hashlink="onze-diensten" size="large">
-                {{ home?.data.attributes.Hero?.button?.title }}
+                {{ home?.Hero?.button?.title }}
               </AppButton>
 
               <AppButton hashlink="cases" size="large" color="transparent">
-                {{ home?.data.attributes.Hero?.button_alt?.title }}
+                {{ home?.Hero?.button_alt?.title }}
               </AppButton>
             </div>
           </div>
@@ -55,7 +55,7 @@
         <!-- Service cards -->
         <div class="grid grid-cols-2 gap-8 lg:gap-12 max-w-5xl w-full">
           <ServiceCard
-            v-for="service in home?.data.attributes.services"
+            v-for="service in home?.services"
             :key="service.id"
             :icon="service.icon"
             :title="service.title"
@@ -105,20 +105,23 @@
         <!-- Heading -->
         <div class="flex flex-col mb-4">
           <div
-            v-html="home.data.attributes.cta.title"
+            v-html="home.cta.title"
             class="text-3xl md:text-4xl lg:text-5xl font-bold font-display mb-3 text-light-main"
           ></div>
         </div>
 
         <!-- Body -->
         <div
-          v-html="home.data.attributes.cta.body"
+          v-html="home.cta.body"
           class="font-body text-light-alt mb-8 text-base md:text-lg lg:text-xl max-w-xl"
         ></div>
 
         <!-- Button -->
-        <AppButton color="transparent-alt" :to="home.data.attributes.cta.button.url">
-          {{ home.data.attributes.cta.button.title }}
+        <AppButton
+          color="transparent-alt"
+          :to="home.cta.button.url"
+        >
+          {{ home.cta.button.title }}
         </AppButton>
       </div>
     </section>
@@ -150,9 +153,11 @@ const query = qs.stringify(
   }
 );
 
-const { data: home } = await useAsyncData("home", () =>
+const { data: homeRes } = await useAsyncData("home", () =>
   $fetch(`${apiBase}/homepage?${query}`)
 );
+
+const home = homeRes.value.data.attributes;
 
 const caseQuery = qs.stringify(
   {
