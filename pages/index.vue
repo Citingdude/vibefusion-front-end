@@ -133,6 +133,7 @@ import * as qs from "qs";
 
 const runtimeConfig = useRuntimeConfig();
 const apiBase = runtimeConfig.apiBase;
+const baseUrl = runtimeConfig.baseUrl;
 
 const query = qs.stringify(
   {
