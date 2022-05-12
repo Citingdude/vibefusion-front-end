@@ -51,7 +51,7 @@
         </div>
 
         <!-- Features grid -->
-        <div class="grid grid-cols-3">
+        <div class="grid gap-8 xl:grid-cols-3">
           <FeaturesCard
             icon="rocket"
             title="Topperformance"
