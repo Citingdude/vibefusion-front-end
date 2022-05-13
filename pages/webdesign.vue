@@ -21,8 +21,10 @@
         <div
           class="flex flex-col xl:flex-row space-y-4 xl:space-y-0 xl:space-x-8"
         >
-          <AppButton>Ontdek onze kwaliteiten</AppButton>
-          <AppButton color="transparent">Vraag een gesprek aan</AppButton>
+          <AppButton hashlink="kwaliteiten">Ontdek onze kwaliteiten</AppButton>
+          <AppButton to="/contact" color="transparent"
+            >Vraag een gesprek aan</AppButton
+          >
         </div>
       </div>
 
@@ -38,6 +40,7 @@
 
     <!-- Features -->
     <section
+      id="kwaliteiten"
       class="pt-16 lg:pt-32 pb-20 lg:pb-40 section-padding-x bg-light-alt"
     >
       <div class="container mx-auto">
@@ -169,7 +172,9 @@
     </section>
 
     <!-- Faq -->
-    <section class="bg-light-main pt-16 lg:pt-32 pb-20 lg:pb-40 section-padding-x">
+    <section
+      class="bg-light-main pt-16 lg:pt-32 pb-20 lg:pb-40 section-padding-x"
+    >
       <div class="container">
         <!-- Heading -->
         <div class="flex flex-col mb-16 items-center sm:items-start">
