@@ -1,9 +1,7 @@
 <template>
   <div>
     <!-- Hero -->
-    <section
-      class="pt-16 lg:pt-32 pb-20 lg:pb-40 section-padding-x"
-    >
+    <section class="pt-16 lg:pt-32 pb-20 lg:pb-40 section-padding-x">
       <div class="container mx-auto grid lg:grid-cols-2 gap-16">
         <!-- Content -->
         <div>
@@ -27,9 +25,44 @@
         <!-- Illustration -->
         <div>
           <img
-            class="max-w-lg"
             src="~/assets/images/webshop-illustration.svg"
             alt=""
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- Affordable -->
+    <section
+      class="bg-light-alt pt-16 lg:pt-32 pb-20 lg:pb-40 section-padding-x"
+    >
+      <div class="container mx-auto grid lg:grid-cols-2 gap-16 items-center">
+        <!-- Content -->
+        <div>
+          <LayoutHeading title="Focus op betaalbaar" class="items-start mb-8" />
+
+          <!-- Body -->
+          <p class="text-lg">
+            Om onze webshops betaalbaar te houden voor kleinere ondernemingen
+            hebben we er voor gekozen om deels te werken met voorgebouwde
+            technische elementen.
+            <br />
+            <br />
+            Dit zijn elementen zoals productfiltering, zoekfuncties,
+            productiegalerijen, accountpagina's en menusystemen.
+            <br />
+            <br />
+            Alle visuele elementen blijven zelf ontworpen door ons zodat jouw
+            webshop uniek is en bij je merk past!
+          </p>
+        </div>
+
+        <!-- Image -->
+        <div>
+          <img
+            class="rounded-tl-4xl rounded-br-4xl shadow-2xl max-w-full"
+            src="~/assets/images/betaalbaar.jpg"
+            alt="Betaalbare webshop"
           />
         </div>
       </div>
