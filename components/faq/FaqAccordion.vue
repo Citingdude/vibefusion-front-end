@@ -13,7 +13,7 @@
     />
     <FaqAccordionQuestion
       question="Wat is een CMS-systeem?"
-      answer="Ja, het is perfect mogelijk om je eigen website volledig zelf te beheren. Wij bieden een aantal mogelijkheden aan in de mate van het beheer omdat niet elk bedrijf evenveel in eigen  beheer wilt hebben. We raden het wel af om zelf structurele aanpassingen te doen aan je website zonder kennis van html, css en javascript."
+      answer="Een Content Management Systeem is een software die het mogelijk maakt om content van een website op een gebruiksvriendelijke manier te beheren. Een bekend voorbeeld hiervan is het ingebouwd blogsysteem van WordPress waarmee je zonder code nieuwe blogs kan publiceren"
     />
     <FaqAccordionQuestion
       question="Kan ik zelf mijn website beheren?"
