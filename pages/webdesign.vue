@@ -167,6 +167,24 @@
         </div>
       </div>
     </section>
+
+    <!-- Faq -->
+    <section class="bg-light-main pt-16 lg:pt-32 pb-20 lg:pb-40 section-padding-x">
+      <div class="container">
+        <!-- Heading -->
+        <div class="flex flex-col mb-16 items-center sm:items-start">
+          <h2
+            class="text-4xl lg:text-5xl font-bold font-display mb-4 text-center sm:text-left"
+          >
+            Veelgestelde vragen
+          </h2>
+
+          <IconsLine />
+        </div>
+
+        <FaqAccordion />
+      </div>
+    </section>
   </div>
 </template>
 
