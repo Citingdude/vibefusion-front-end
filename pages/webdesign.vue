@@ -125,7 +125,9 @@
       <div class="container mx-auto">
         <!-- Heading -->
         <div class="flex flex-col items-center w-full mb-16">
-          <h2 class="text-4xl lg:text-5xl font-bold font-display mb-4">
+          <h2
+            class="text-4xl lg:text-5xl font-bold font-display mb-4 text-center"
+          >
             Hoe verloopt het proces?
           </h2>
 
@@ -135,28 +137,29 @@
         <!-- Roadmap -->
         <div class="flex flex-col space-y-8">
           <RoadmapStep
+            direction="reverse"
             title="Kennismakingsgesprek"
             content="Elke potentieel project starten we met een vrijblijvend kennismakingsgesprek. We vinden het zeer belangrijk dat we de core business van je bedrijf goed begrijpen en dat onze waardes met elkaar overeen komen."
             number="1"
           />
           <RoadmapStep
-            direction="reverse"
             title="Projectbespreking & planning"
             content="Wanneer je er voor kiest om samen met ons in zee te gaan, bespreken we uitvoerig het volledige traject. Zo bekijken we samen hoe lang het traject zal duren en op welke momenten we zullen afleveren."
             number="2"
           />
           <RoadmapStep
+            direction="reverse"
             title="Designfase"
             content="In de designfase werken we het volledige design van jouw website uit. We beginnen altijd met de homepage en vragen goedkeuring van het design om de look & feel vast te leggen. Wanneer de algemene look en feel juist zit, designen we de resterende pagina's."
             number="3"
           />
           <RoadmapStep
-            direction="reverse"
             title="Review & testing"
             content="Wanneer de website is opgebouwd houden we nog een laatste feedbackronde om alle details op punt te stellen. Als alles is goedgekeurd, testen we de website nog uitvoerig zodat we zeker weten dat alles goed functioneert."
             number="4"
           />
           <RoadmapStep
+            direction="reverse"
             title="Oplevering website & opvolging"
             content="Tot slot leveren we de website af en volgen we nog voor een bepaalde periode alles op. Alle schoonheidsfoutjes werken we gratis voor je weg. Na deze periode kan je er voor kiezen om verder met ons in zee te gaan door het websitebeheer aan ons uit te besteden."
             number="5"
