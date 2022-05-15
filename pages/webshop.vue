@@ -24,10 +24,7 @@
 
         <!-- Illustration -->
         <div>
-          <img
-            src="~/assets/images/webshop-illustration.svg"
-            alt=""
-          />
+          <img src="~/assets/images/webshop-illustration.svg" alt="" />
         </div>
       </div>
     </section>
@@ -67,6 +64,7 @@
         </div>
       </div>
     </section>
+
     <!-- Easy -->
     <section
       class="bg-light-main pt-16 lg:pt-32 pb-20 lg:pb-40 section-padding-x"
@@ -98,6 +96,17 @@
             kortingsbonnen, voorraad en nog veel meer.
           </p>
         </div>
+      </div>
+    </section>
+
+    <!-- Cta -->
+    <section class="bg-dark-300 py-20 lg:py-24 section-padding-x">
+      <div class="flex flex-col items-center container mx-auto">
+        <LayoutHeading class="text-light-main text-center mb-12" title="Jouw webshop starten?" />
+
+        <AppButton color="transparent-alt">
+          Vraag een vrijblijvend gesprek aan
+        </AppButton>
       </div>
     </section>
   </div>
