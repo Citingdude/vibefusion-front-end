@@ -107,7 +107,7 @@
           title="Jouw webshop starten?"
         />
 
-        <AppButton color="transparent-alt">
+        <AppButton to="/contact" color="transparent-alt">
           Vraag een vrijblijvend gesprek aan
         </AppButton>
       </div>
