@@ -67,6 +67,39 @@
         </div>
       </div>
     </section>
+    <!-- Easy -->
+    <section
+      class="bg-light-main pt-16 lg:pt-32 pb-20 lg:pb-40 section-padding-x"
+    >
+      <div class="container mx-auto grid lg:grid-cols-2 gap-16 items-center">
+        <!-- Image -->
+        <div class="order-2 sm:order-1">
+          <img
+            class="rounded-tl-4xl rounded-br-4xl shadow-2xl max-w-full"
+            src="~/assets/images/eenvoudig.jpeg"
+            alt="Eenvoudig beheer"
+          />
+        </div>
+
+        <!-- Content -->
+        <div class="order-1 sm:order-2">
+          <LayoutHeading
+            title="Gebruiksvriendelijke beheer"
+            class="items-start mb-8"
+          />
+
+          <!-- Body -->
+          <p class="text-lg">
+            We bouwen al onze webshops op in WordPress. Dit heeft als voordeel
+            dat het gebruiksvriendelijke Content Management Systeem van
+            WordPress ook voor je webshop ter beschikking staat.
+            <br /><br />
+            Zo beheer je zelf eenvoudig je producten, bestellingen,
+            kortingsbonnen, voorraad en nog veel meer.
+          </p>
+        </div>
+      </div>
+    </section>
   </div>
 </template>
 
