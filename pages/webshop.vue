@@ -31,7 +31,7 @@
 
     <!-- Affordable -->
     <section
-      class="bg-light-alt pt-16 lg:pt-32 pb-20 lg:pb-40 section-padding-x"
+      class="bg-light-alt py-16 lg:py-32 section-padding-x"
     >
       <div class="container mx-auto grid lg:grid-cols-2 gap-16 items-center">
         <!-- Content -->
@@ -67,7 +67,7 @@
 
     <!-- Easy -->
     <section
-      class="bg-light-main pt-16 lg:pt-32 pb-20 lg:pb-40 section-padding-x"
+      class="bg-light-main py-16 lg:py-32 section-padding-x"
     >
       <div class="container mx-auto grid lg:grid-cols-2 gap-16 items-center">
         <!-- Image -->
