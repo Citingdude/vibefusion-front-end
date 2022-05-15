@@ -102,13 +102,17 @@
     <!-- Cta -->
     <section class="bg-dark-300 py-20 lg:py-24 section-padding-x">
       <div class="flex flex-col items-center container mx-auto">
-        <LayoutHeading class="text-light-main text-center mb-12" title="Jouw webshop starten?" />
+        <LayoutHeading
+          class="text-light-main text-center mb-12"
+          title="Jouw webshop starten?"
+        />
 
         <AppButton color="transparent-alt">
           Vraag een vrijblijvend gesprek aan
         </AppButton>
       </div>
     </section>
+
     <!-- Integrations -->
     <section
       class="bg-light-alt py-16 lg:py-32 section-padding-x"
@@ -142,6 +146,39 @@
             src="~/assets/images/integraties.jpeg"
             alt="Betaalbare webshop"
           />
+        </div>
+      </div>
+    </section>
+
+    <!-- Responsive -->
+    <section
+      class="bg-light-main py-16 lg:py-32 section-padding-x"
+    >
+      <div class="container mx-auto grid lg:grid-cols-2 gap-16 items-center">
+        <!-- Image -->
+        <div class="order-2 sm:order-1">
+          <img
+            class="rounded-tl-4xl rounded-br-4xl shadow-2xl max-w-full"
+            src="~/assets/images/eenvoudig.jpeg"
+            alt="Eenvoudig beheer"
+          />
+        </div>
+
+        <!-- Content -->
+        <div class="order-1 sm:order-2">
+          <LayoutHeading title="Mobielvriendelijk" class="items-start mb-8" />
+
+          <!-- Body -->
+          <p class="text-lg">
+            Steeds meer mensen surfen en kopen via de smartphone of tablet. Het
+            is daarom enorm belangrijk dat jouw webshop ook op smartphones en
+            tablets volledig functioneert én de bezoeker een goede
+            gebruikservaring levert.
+            <br /><br />
+            Al onze webshops zijn volledig responsief opgebouwd zodat jouw
+            toekomstige klanten ook via de smartphone of tablet moeiteloos hun
+            aankopen kunnen doen.
+          </p>
         </div>
       </div>
     </section>
