@@ -183,7 +183,11 @@
           <BenefitsItem title="Straalt professionaliteit uit" />
           <BenefitsItem title="Onderscheidt je van de concurrentie" />
           <BenefitsItem title="Versterkt de verbondenheid met de klant" />
-          <BenefitsItem title="Start jouw branding project" type="cta" to="/contact" />
+          <BenefitsItem
+            title="Start jouw branding project"
+            type="cta"
+            to="/contact"
+          />
         </div>
       </div>
     </section>
