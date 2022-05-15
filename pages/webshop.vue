@@ -109,6 +109,42 @@
         </AppButton>
       </div>
     </section>
+    <!-- Integrations -->
+    <section
+      class="bg-light-alt py-16 lg:py-32 section-padding-x"
+    >
+      <div class="container mx-auto grid lg:grid-cols-2 gap-16 items-center">
+        <!-- Content -->
+        <div>
+          <LayoutHeading
+            title="Integraties en uitbreidingen"
+            class="items-start mb-8"
+          />
+
+          <!-- Body -->
+          <p class="text-lg">
+            Om onze webshops betaalbaar te houden voor kleinere ondernemingen
+            hebben we er voor gekozen om deels te werken met voorgebouwde
+            technische elementen.
+            <br /><br />
+            Dit zijn elementen zoals productfiltering, zoekfuncties,
+            productiegalerijen, accountpagina's en menusystemen.
+            <br /><br />
+            Alle visuele elementen blijven zelf ontworpen door ons zodat jouw
+            webshop uniek is en bij je merk past!
+          </p>
+        </div>
+
+        <!-- Image -->
+        <div>
+          <img
+            class="rounded-tl-4xl rounded-br-4xl shadow-2xl max-w-full"
+            src="~/assets/images/integraties.jpeg"
+            alt="Betaalbare webshop"
+          />
+        </div>
+      </div>
+    </section>
   </div>
 </template>
 
