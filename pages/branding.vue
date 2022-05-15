@@ -167,6 +167,26 @@
         </div>
       </div>
     </section>
+
+    <!-- Benefits -->
+    <section class="bg-dark-300 py-16 lg:py-32 section-padding-x">
+      <div class="flex flex-col items-center container mx-auto">
+        <LayoutHeading
+          class="text-center text-light-main mb-16"
+          title="Voordelen van een sterke branding"
+        />
+
+        <!-- Benefits -->
+        <div class="grid lg:grid-cols-2 gap-y-8 gap-x-32 max-w-6xl">
+          <BenefitsItem title="Vergroot de merkherkenbaarheid" />
+          <BenefitsItem title="Creëert duidelijkheid" />
+          <BenefitsItem title="Straalt professionaliteit uit" />
+          <BenefitsItem title="Onderscheidt je van de concurrentie" />
+          <BenefitsItem title="Versterkt de verbondenheid met de klant" />
+          <BenefitsItem title="Start jouw branding project" type="cta" to="/contact" />
+        </div>
+      </div>
+    </section>
   </div>
 </template>
 
