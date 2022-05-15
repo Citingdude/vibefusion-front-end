@@ -3,14 +3,14 @@
     <!-- Icon -->
     <IconsArrow />
 
-    <h3 v-if="props.type === 'normal'" class="text-light-alt text-2xl">
+    <h3 v-if="props.type === 'normal'" class="text-light-alt text-lg sm:text-2xl">
       {{ props.title }}
     </h3>
 
     <NuxtLink
       :to="to"
       v-if="props.type === 'cta'"
-      class="text-light-main text-2xl hover:text-accent transition border-b border-accent"
+      class="text-light-main text-lg sm:text-2xl hover:text-accent transition border-b border-accent"
     >
       {{ props.title }}
     </NuxtLink>
