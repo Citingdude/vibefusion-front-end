@@ -191,6 +191,15 @@
         </div>
       </div>
     </section>
+
+    <!-- Cta -->
+    <section class="py-16 lg:py-32 section-padding-x">
+      <div class="container mx-auto flex flex-col items-center bg-dark-200 p-16 rounded-tl-4xl rounded-br-4xl">
+        <h2 class="text-light-main text-3xl mb-8 font-display font-bold sm:text-4xl">Klaar voor jouw branding project?</h2>
+
+        <AppButton color="transparent-alt" class="flex">Vraag een vrijblijvend gesprek aan</AppButton>
+      </div>
+    </section>
   </div>
 </template>
 
