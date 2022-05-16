@@ -29,17 +29,17 @@ let dienstenDropdown = ref(false)
 
 function toggleDropdown() {
   dienstenDropdown.value = !dienstenDropdown.value
-  // if (dienstenDropdown) {
-  //   setTimeout(() => setCloseEvent(), 500);
-  // }
+  if (dienstenDropdown) {
+    setTimeout(() => setCloseEvent(), 500);
+  }
 }
 
-// function closeDropdown() {
-//   dienstenDropdown.value = false
-//   window.removeEventListener('click', closeDropdown)
-// }
+function closeDropdown() {
+  dienstenDropdown.value = false
+  window.removeEventListener('click', closeDropdown)
+}
 
-// function setCloseEvent() {
-//   window.addEventListener('click', closeDropdown)
-// }
+function setCloseEvent() {
+  window.addEventListener('click', closeDropdown)
+}
 </script>
