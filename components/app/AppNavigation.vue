@@ -55,6 +55,18 @@ function setCloseEvent() {
 </script>
 
 <style scoped>
+nav a {
+  position: relative;
+}
+
+nav > .router-link-active:after {
+  content: url("https://vibefusion-demo.be/uploads/dot_c1fd7550d8.svg");
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%) rotate(180deg);
+  bottom: -20px;
+}
+
 /* we will explain what these classes do next! */
 .v-enter-active,
 .v-leave-active {
