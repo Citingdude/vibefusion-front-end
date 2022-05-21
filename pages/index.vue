@@ -117,10 +117,7 @@
         ></div>
 
         <!-- Button -->
-        <AppButton
-          color="transparent-alt"
-          :to="home.cta.button.url"
-        >
+        <AppButton color="transparent-alt" :to="home.cta.button.url">
           {{ home.cta.button.title }}
         </AppButton>
       </div>
@@ -130,6 +127,13 @@
 
 <script setup>
 import * as qs from "qs";
+
+definePageMeta({
+  title: "My home page",
+  layoutTransition: {
+    name: 'page'
+  },
+});
 
 const runtimeConfig = useRuntimeConfig();
 const apiBase = runtimeConfig.apiBase;
@@ -175,3 +179,20 @@ const { data } = await useAsyncData("cases", () =>
 
 const cases = data.value.data.slice(0, 2);
 </script>
+
+<style>
+.page-enter-from{
+  opacity: 0;
+}
+
+.page-enter-active,
+.page-leave-active {
+  transition: all 0.2s;
+  transition-timing-function: ease-in-out;
+}
+
+.page-enter,
+.page-leave-to {
+  opacity: 0;
+}
+</style>
