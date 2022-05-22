@@ -131,7 +131,7 @@ import * as qs from "qs";
 definePageMeta({
   title: "My home page",
   layoutTransition: {
-    name: 'page'
+    name: "page",
   },
 });
 
@@ -181,7 +181,7 @@ const cases = data.value.data.slice(0, 2);
 </script>
 
 <style>
-.page-enter-from{
+.page-enter-from {
   opacity: 0;
 }
 
