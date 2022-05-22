@@ -2,7 +2,7 @@
   <div>
     <!-- Image -->
     <div>
-      <img class="rounded-tr-4xl" :src="baseUrl + imageUrl" alt="" />
+      <img class="rounded-tr-4xl" :src="imageUrl" alt="" />
     </div>
 
     <!-- Content -->
