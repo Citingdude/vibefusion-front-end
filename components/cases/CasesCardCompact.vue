@@ -2,7 +2,7 @@
   <div>
     <!-- Image -->
     <div>
-      <img class="rounded-tr-4xl" :src="imageUrl" alt="" />
+      <img class="rounded-tr-4xl" :src="baseUrl + imageUrl" alt="" />
     </div>
 
     <!-- Content -->
@@ -19,6 +19,8 @@
 </template>
 
 <script setup>
+const baseUrl = useBaseUrl();
+
 const props = defineProps({
   imageUrl: {
     type: String,
