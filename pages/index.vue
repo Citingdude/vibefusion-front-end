@@ -2,50 +2,47 @@
   <div>
     <!-- Hero -->
     <section
-      class="container mx-auto pt-20 lg:pt-32 lg:pb-40 bg-left bg-no-repeat bg-cover section-padding-x"
+      class="container grid items-center justify-center grid-cols-2 gap-12 pt-20 mx-auto bg-left bg-no-repeat bg-cover lg:pt-32 lg:pb-40 section-padding-x md:h-[90vh] lg:grid-cols-12"
     >
-      <div class="content-container items-center">
-        <div class="grid grid-cols-2 lg:grid-cols-12 gap-12">
-          <!-- Content -->
-          <div
-            class="col-span-2 lg:col-span-6 max-w-full items-center anim-fade-in-left"
-          >
-            <!-- Heading -->
-            <div
-              v-html="home?.Hero?.Title"
-              class="text-6xl lg:text-7xl font-display mb-16 lg:mb-24"
-            ></div>
+      <!-- Content -->
+      <div
+        class="items-center max-w-full col-span-2 lg:col-span-6 anim-fade-in-left"
+      >
+        <!-- Heading -->
+        <div
+          v-html="home?.Hero?.Title"
+          class="mb-16 text-6xl lg:text-7xl font-display lg:mb-24"
+        ></div>
 
-            <!-- Buttons -->
-            <div
-              class="flex flex-col md:flex-row items-center md:items-start gap-8"
-            >
-              <AppButton hashlink="onze-diensten" size="large">
-                {{ home?.Hero?.button?.title }}
-              </AppButton>
+        <!-- Buttons -->
+        <div
+          class="flex flex-col items-center gap-8 md:flex-row md:items-start"
+        >
+          <AppButton hashlink="onze-diensten" size="large">
+            {{ home?.Hero?.button?.title }}
+          </AppButton>
 
-              <AppButton hashlink="cases" size="large" color="transparent">
-                {{ home?.Hero?.button_alt?.title }}
-              </AppButton>
-            </div>
-          </div>
-
-          <!-- Illustration -->
-          <div class="col-span-2 lg:col-span-6 anim-fade-in-right">
-            <IllustrationsHomeHero />
-          </div>
+          <AppButton hashlink="cases" size="large" color="transparent">
+            {{ home?.Hero?.button_alt?.title }}
+          </AppButton>
         </div>
+      </div>
+
+      <!-- Illustration -->
+      <div class="col-span-2 lg:col-span-6 anim-fade-in-right">
+        <IllustrationsHomeHero />
       </div>
     </section>
 
     <!-- Diensten -->
-    <section id="onze-diensten" class="bg-light-alt">
-      <div
-        class="container mx-auto flex flex-col py-24 section-padding-x justify-center items-center"
-      >
+    <section
+      id="onze-diensten"
+      class="py-20 bg-light-alt md:py-40 section-padding-x"
+    >
+      <div class="container flex flex-col items-center justify-center mx-auto">
         <!-- Section title -->
         <div class="flex flex-col items-center mb-8">
-          <h2 class="text-4xl lg:text-5xl font-bold font-display mb-4">
+          <h2 class="mb-4 text-4xl font-bold lg:text-5xl font-display">
             Onze diensten
           </h2>
 
@@ -53,7 +50,7 @@
         </div>
 
         <!-- Service cards -->
-        <div class="grid grid-cols-2 gap-8 lg:gap-12 max-w-5xl w-full">
+        <div class="grid w-full max-w-5xl grid-cols-2 gap-8 lg:gap-12">
           <ServiceCard
             v-for="service in home?.services"
             :key="service.id"
@@ -69,13 +66,13 @@
     </section>
 
     <!-- Cases -->
-    <section id="cases" class="section-padding-x">
+    <section id="cases" class="py-20 md:py-40 section-padding-x">
       <div
-        class="flex flex-col py-24 container mx-auto justify-center items-center"
+        class="container flex flex-col items-center justify-center mx-auto"
       >
         <!-- Section heading -->
         <div class="flex flex-col items-center mb-16">
-          <h2 class="text-4xl lg:text-5xl font-bold font-display mb-4">
+          <h2 class="mb-4 text-4xl font-bold lg:text-5xl font-display">
             Cases
           </h2>
 
@@ -100,20 +97,20 @@
     </section>
 
     <!-- Cta -->
-    <section class="flex section-padding-x bg-dark-300 justify-center">
-      <div class="flex flex-col py-20 content-container">
+    <section class="flex justify-center py-20 section-padding-x bg-dark-300 md:py-40">
+      <div class="flex flex-col content-container">
         <!-- Heading -->
         <div class="flex flex-col mb-4">
           <div
             v-html="home.cta.title"
-            class="text-3xl md:text-4xl lg:text-5xl font-bold font-display mb-3 text-light-main"
+            class="mb-3 text-3xl font-bold md:text-4xl lg:text-5xl font-display text-light-main"
           ></div>
         </div>
 
         <!-- Body -->
         <div
           v-html="home.cta.body"
-          class="font-body text-light-alt mb-8 text-base md:text-lg lg:text-xl max-w-xl"
+          class="max-w-xl mb-8 text-base font-body text-light-alt md:text-lg lg:text-xl"
         ></div>
 
         <!-- Button -->
