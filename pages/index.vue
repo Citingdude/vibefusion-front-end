@@ -38,7 +38,7 @@
     <section id="onze-diensten" class="py-20 bg-light-alt md:py-40">
       <div class="container flex flex-col items-center justify-center">
         <!-- Section title -->
-        <div class="flex flex-col items-center mb-8">
+        <div class="flex flex-col items-center mb-16">
           <h2 class="mb-4 text-4xl font-bold lg:text-5xl font-display">
             Onze diensten
           </h2>
