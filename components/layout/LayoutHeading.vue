@@ -2,21 +2,33 @@
   <div class="flex flex-col w-full">
     <h1
       v-if="props.size === 'h1'"
-      class="text-5xl lg:text-6xl font-bold font-display mb-4"
+      class="mb-4 text-5xl font-bold lg:text-6xl font-display"
+      :class="{
+        'text-light-main': props.textColor === 'light',
+        'text-dark-400': props.textColor === 'dark',
+      }"
     >
       {{ props.title }}
     </h1>
 
     <h2
       v-if="props.size === 'h2'"
-      class="text-4xl lg:text-5xl font-bold font-display mb-4"
+      class="mb-4 text-4xl font-bold lg:text-5xl font-display"
+      :class="{
+        'text-light-main': props.textColor === 'light',
+        'text-dark-400': props.textColor === 'dark',
+      }"
     >
       {{ props.title }}
     </h2>
 
     <h3
       v-if="props.size === 'h3'"
-      class="text-3xl lg:text-4xl font-bold font-display mb-3"
+      class="mb-3 text-3xl font-bold lg:text-4xl font-display"
+      :class="{
+        'text-light-main': props.textColor === 'light',
+        'text-dark-400': props.textColor === 'dark',
+      }"
     >
       {{ props.title }}
     </h3>
@@ -35,6 +47,11 @@ const props = defineProps({
   size: {
     type: String,
     default: "h2",
+  },
+
+  textColor: {
+    type: String,
+    default: "dark",
   },
 });
 </script>
