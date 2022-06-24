@@ -1,14 +1,6 @@
 <template>
   <div
-    class="
-      flex flex-col
-      justify-center
-      items-center
-      col-span-2
-      md:col-span-1
-      p-12 bg-dark
-      anim-fade-in-up
-    "
+    class="flex flex-col items-center justify-center col-span-2 p-12 md:col-span-1 bg-dark anim-fade-in-up"
     :class="`${getBorders} ${getColor}`"
   >
     <div v-if="icon">
@@ -17,7 +9,7 @@
       <IconsBranding v-if="icon === 'branding'" />
     </div>
 
-    <h3 class="font-display font-bold text-3xl my-8">
+    <h3 class="my-8 text-3xl font-bold font-display" :class="`${getColor}`">
       {{ props.title }}
     </h3>
 
@@ -80,10 +72,10 @@ const getBorders = computed(() => {
 const getColor = computed(() => {
   switch (props.color) {
     case "light":
-      return "bg-light-main"
+      return "bg-light-main";
 
     case "dark":
-      return "bg-dark-200 text-light-main"
+      return "bg-dark-200 text-light-main";
   }
-})
+});
 </script>
