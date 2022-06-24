@@ -1,9 +1,7 @@
 <template>
   <div>
     <!-- Hero -->
-    <section
-      class="container mx-auto pt-20 lg:pt-32 lg:pb-40 bg-left bg-no-repeat bg-cover section-padding-x"
-    >
+    <section class="container py-20 md:py-40">
       <LayoutHeading
         class="flex items-start mb-16"
         title="Projecten waar we trots op zijn"
@@ -11,7 +9,7 @@
       />
 
       <!-- Cases -->
-      <div class="grid lg:grid-cols-2 gap-16">
+      <div class="grid gap-16 lg:grid-cols-2">
         <CasesCardCompact
           v-for="caseCard in cases"
           :key="caseCard.id"
