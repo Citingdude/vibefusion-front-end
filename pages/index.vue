@@ -2,7 +2,7 @@
   <div>
     <!-- Hero -->
     <section
-      class="container grid items-center justify-center grid-cols-2 gap-12 pt-20 lg:pt-32 lg:pb-40 md:h-[90vh] lg:grid-cols-12"
+      class="container grid items-center justify-center grid-cols-2 gap-12 pt-20 md:pt-32 lg:pb-40 xl:h-[90vh] lg:grid-cols-12"
     >
       <!-- Content -->
       <div
