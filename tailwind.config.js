@@ -6,6 +6,10 @@ module.exports = {
     "./plugins/**/*.{js,ts}",
   ],
   theme: {
+    container: {
+      center: true,
+      padding: "2rem"
+    },
     fontFamily: {
       display: ["Alegreya"],
       body: ["Alegreya Sans"],
