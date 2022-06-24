@@ -1,11 +1,11 @@
 <template>
   <div>
     <!-- Hero -->
-    <section class="pt-16 lg:pt-32 pb-20 lg:pb-40 section-padding-x">
-      <div class="container mx-auto grid lg:grid-cols-2 gap-16">
+    <section class="py-20 md:py-40">
+      <div class="container grid gap-16 lg:grid-cols-2">
         <!-- Content -->
         <div>
-          <h1 class="text-4xl lg:text-5xl font-bold font-display mb-4">
+          <h1 class="mb-4 text-4xl font-bold lg:text-5xl font-display">
             Verkoop eenvoudig online met een betaalbare webshop
           </h1>
 
@@ -30,10 +30,8 @@
     </section>
 
     <!-- Affordable -->
-    <section
-      class="bg-light-alt py-16 lg:py-32 section-padding-x"
-    >
-      <div class="container mx-auto grid lg:grid-cols-2 gap-16 items-center">
+    <section class="py-20 md:py-40 bg-light-alt">
+      <div class="container grid items-center gap-16 mx-auto lg:grid-cols-2">
         <!-- Content -->
         <div>
           <LayoutHeading title="Focus op betaalbaar" class="items-start mb-8" />
@@ -57,7 +55,7 @@
         <!-- Image -->
         <div>
           <img
-            class="rounded-tl-4xl rounded-br-4xl shadow-2xl max-w-full"
+            class="max-w-full shadow-2xl rounded-tl-4xl rounded-br-4xl"
             src="~/assets/images/betaalbaar.jpg"
             alt="Betaalbare webshop"
           />
@@ -66,14 +64,12 @@
     </section>
 
     <!-- Easy -->
-    <section
-      class="bg-light-main py-16 lg:py-32 section-padding-x"
-    >
-      <div class="container mx-auto grid lg:grid-cols-2 gap-16 items-center">
+    <section class="py-20 md:py-40 bg-light-main">
+      <div class="container grid items-center gap-16 lg:grid-cols-2">
         <!-- Image -->
         <div class="order-2 sm:order-1">
           <img
-            class="rounded-tl-4xl rounded-br-4xl shadow-2xl max-w-full"
+            class="max-w-full shadow-2xl rounded-tl-4xl rounded-br-4xl"
             src="~/assets/images/eenvoudig.jpeg"
             alt="Eenvoudig beheer"
           />
@@ -100,11 +96,12 @@
     </section>
 
     <!-- Cta -->
-    <section class="bg-dark-300 py-20 lg:py-24 section-padding-x">
-      <div class="flex flex-col items-center container mx-auto">
+    <section class="py-20 md:py-40 bg-dark-300">
+      <div class="container flex flex-col items-center mx-auto">
         <LayoutHeading
-          class="text-light-main text-center mb-12"
+          class="mb-12 text-center text-light-main"
           title="Jouw webshop starten?"
+          textColor="light"
         />
 
         <AppButton to="/contact" color="transparent-alt">
@@ -114,10 +111,8 @@
     </section>
 
     <!-- Integrations -->
-    <section
-      class="bg-light-alt py-16 lg:py-32 section-padding-x"
-    >
-      <div class="container mx-auto grid lg:grid-cols-2 gap-16 items-center">
+    <section class="py-20 md:py-40 bg-light-alt">
+      <div class="container grid items-center gap-16 mx-auto lg:grid-cols-2">
         <!-- Content -->
         <div>
           <LayoutHeading
@@ -142,7 +137,7 @@
         <!-- Image -->
         <div>
           <img
-            class="rounded-tl-4xl rounded-br-4xl shadow-2xl max-w-full"
+            class="max-w-full shadow-2xl rounded-tl-4xl rounded-br-4xl"
             src="~/assets/images/integraties.jpeg"
             alt="Betaalbare webshop"
           />
@@ -151,14 +146,12 @@
     </section>
 
     <!-- Responsive -->
-    <section
-      class="bg-light-main py-16 lg:py-32 section-padding-x"
-    >
-      <div class="container mx-auto grid lg:grid-cols-2 gap-16 items-center">
+    <section class="py-20 md:py-40 bg-light-main">
+      <div class="container grid items-center gap-16 mx-auto lg:grid-cols-2">
         <!-- Image -->
         <div class="order-2 sm:order-1">
           <img
-            class="rounded-tl-4xl rounded-br-4xl shadow-2xl max-w-full"
+            class="max-w-full shadow-2xl rounded-tl-4xl rounded-br-4xl"
             src="~/assets/images/eenvoudig.jpeg"
             alt="Eenvoudig beheer"
           />
