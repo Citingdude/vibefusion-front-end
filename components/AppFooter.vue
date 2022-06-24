@@ -1,8 +1,8 @@
 <template>
-  <footer class="section-padding-x bg-dark-400 pt-16 pb-8">
-    <div class="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-12 content-container mb-10">
+  <footer class="pt-16 pb-8 bg-dark-400">
+    <div class="container grid grid-cols-1 gap-12 mb-10 lg:grid-cols-4 md:grid-cols-2">
       <div>
-        <h3 class="text-light-main text-2xl font-display mb-4">Navigatie</h3>
+        <h3 class="mb-4 text-2xl text-light-main font-display">Navigatie</h3>
         <div class="flex flex-col space-y-1">
           <a href="#" class="text-light-main link-hover">Home</a>
           <a href="#" class="text-light-main link-hover">Cases</a>
@@ -12,7 +12,7 @@
       </div>
 
       <div>
-        <h3 class="text-light-main text-2xl font-display mb-4">Diensten</h3>
+        <h3 class="mb-4 text-2xl text-light-main font-display">Diensten</h3>
         <div class="flex flex-col space-y-1">
           <a href="#" class="text-light-main link-hover">Website laten maken</a>
           <a href="#" class="text-light-main link-hover">Webshop laten maken</a>
@@ -21,7 +21,7 @@
       </div>
 
       <div>
-        <h3 class="text-light-main text-2xl font-display mb-4">Contactgegevens</h3>
+        <h3 class="mb-4 text-2xl text-light-main font-display">Contactgegevens</h3>
         <div class="flex flex-col space-y-1">
           <p class="text-light-main">Meesstraat 7</p>
           <p class="text-light-main">3950 Bocholt</p>
@@ -38,11 +38,11 @@
     </div>
 
     <div
-      class="content-container flex md:flex-row flex-col md:justify-between items-center pt-4 border-t-2 border-dark-100"
+      class="container flex flex-col items-center pt-4 border-t-2 md:flex-row md:justify-between border-dark-100"
     >
-      <p class="text-light-alt md:mb-0 mb-4">Copyright © {{ getYear }} VibeFusion</p>
+      <p class="mb-4 text-light-alt md:mb-0">Copyright © {{ getYear }} VibeFusion</p>
 
-      <div class="flex flex-row text-light-alt space-x-12">
+      <div class="flex flex-row space-x-12 text-light-alt">
         <a class="link-hover" href="/cookiebeleid">Cookiebeleid</a>
         <a class="link-hover" href="/privacyverklaring">Privacyverklaring</a>
       </div>
