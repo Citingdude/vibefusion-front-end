@@ -1,7 +1,7 @@
 <template>
-  <header class="shadow-xl">
+  <header class="shadow-2xl">
     <div
-      class="container mx-auto relative grid grid-cols-12 lg:gap-12 section-padding-x py-4 lg:py-6 items-center"
+      class="container relative grid items-center grid-cols-12 py-4 mx-auto lg:gap-12 section-padding-x lg:py-6"
     >
       <div class="col-span-8 lg:col-span-3 w-60">
         <NuxtLink to="/">
@@ -11,15 +11,15 @@
 
       <AppNavigation />
 
-      <div class="hidden lg:flex lg:col-span-3 justify-end">
+      <div class="justify-end hidden lg:flex lg:col-span-3">
         <NuxtLink
           to="/contact"
-          class="bg-light-alt px-4 py-2 rounded-tl-lg rounded-br-lg font-display font-medium text-xl text-accent transition border-2 border-light-main hover:border-accent"
+          class="px-4 py-2 text-xl font-medium transition border-2 rounded-tl-lg rounded-br-lg bg-light-alt font-display text-accent border-light-main hover:border-accent"
         >Contact</NuxtLink>
       </div>
 
       <!-- Hamburger -->
-      <div @click="toggleMobileMenu()" class="flex col-span-4 lg:hidden justify-end items-center">
+      <div @click="toggleMobileMenu()" class="flex items-center justify-end col-span-4 lg:hidden">
         <AppHamburger />
       </div>
 
