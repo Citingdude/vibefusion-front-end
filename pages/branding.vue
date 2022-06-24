@@ -1,11 +1,11 @@
 <template>
   <div>
     <!-- Hero -->
-    <section class="pt-16 lg:pt-32 pb-20 lg:pb-40 section-padding-x">
-      <div class="container mx-auto grid lg:grid-cols-2 gap-16">
+    <section class="py-20 md:py-40">
+      <div class="container grid gap-16 lg:grid-cols-2">
         <!-- Content -->
         <div>
-          <h1 class="text-4xl lg:text-5xl font-bold font-display mb-4">
+          <h1 class="mb-4 text-4xl font-bold lg:text-5xl font-display">
             Overtuig je klanten met een sterke branding
           </h1>
 
@@ -35,20 +35,17 @@
     </section>
 
     <!-- Branding package -->
-    <section
-      id="branding-package"
-      class="bg-light-alt py-16 lg:py-32 section-padding-x"
-    >
-      <div class="container mx-auto">
+    <section id="branding-package" class="py-20 md:py-40 bg-light-alt">
+      <div class="container">
         <LayoutHeading
-          class="text-center mb-16"
+          class="mb-16 text-center"
           title="Een compleet branding pakket"
         />
 
         <!-- Content -->
         <div class="grid gap-24">
           <!-- Logo -->
-          <div class="grid lg:grid-cols-2 gap-16 items-center">
+          <div class="grid items-center gap-16 lg:grid-cols-2">
             <div>
               <LayoutHeading class="items-start mb-8" title="Logo" size="h3" />
 
@@ -74,7 +71,7 @@
           </div>
 
           <!-- Kleurenpalet -->
-          <div class="grid lg:grid-cols-2 gap-16 items-center">
+          <div class="grid items-center gap-16 lg:grid-cols-2">
             <div>
               <img
                 class="rounded-tl-4xl rounded-br-4xl"
@@ -105,7 +102,7 @@
           </div>
 
           <!-- Logo -->
-          <div class="grid lg:grid-cols-2 gap-16 items-center">
+          <div class="grid items-center gap-16 lg:grid-cols-2">
             <div>
               <LayoutHeading
                 class="items-start mb-8"
@@ -137,7 +134,7 @@
           </div>
 
           <!-- Steunelementen -->
-          <div class="grid lg:grid-cols-2 gap-16 items-center">
+          <div class="grid items-center gap-16 lg:grid-cols-2">
             <div>
               <img
                 class="rounded-tl-4xl rounded-br-4xl"
@@ -169,15 +166,16 @@
     </section>
 
     <!-- Benefits -->
-    <section class="bg-dark-300 py-16 lg:py-32 section-padding-x">
-      <div class="flex flex-col items-center container mx-auto">
+    <section class="py-20 md:py-40 bg-dark-300">
+      <div class="container flex flex-col items-center">
         <LayoutHeading
-          class="text-center text-light-main mb-16"
+          class="mb-24 text-center text-light-main"
           title="Voordelen van een sterke branding"
+          textColor="light"
         />
 
         <!-- Benefits -->
-        <div class="grid lg:grid-cols-2 gap-y-8 gap-x-32 max-w-6xl">
+        <div class="grid max-w-6xl lg:grid-cols-2 gap-y-8 gap-x-32">
           <BenefitsItem title="Vergroot de merkherkenbaarheid" />
           <BenefitsItem title="Creëert duidelijkheid" />
           <BenefitsItem title="Straalt professionaliteit uit" />
@@ -193,11 +191,19 @@
     </section>
 
     <!-- Cta -->
-    <section class="py-16 lg:py-32 section-padding-x">
-      <div class="container mx-auto flex flex-col items-center bg-dark-200 p-16 rounded-tl-4xl rounded-br-4xl">
-        <h2 class="text-light-main text-3xl mb-8 font-display font-bold sm:text-4xl">Klaar voor jouw branding project?</h2>
+    <section class="py-20 md:py-40">
+      <div
+        class="container flex flex-col items-center p-16 md:py-32 bg-dark-200 rounded-tl-4xl rounded-br-4xl"
+      >
+        <h2
+          class="mb-8 text-3xl font-bold text-light-main font-display sm:text-4xl"
+        >
+          Klaar voor jouw branding project?
+        </h2>
 
-        <AppButton color="transparent-alt" class="flex">Vraag een vrijblijvend gesprek aan</AppButton>
+        <AppButton color="transparent-alt" class="flex"
+          >Vraag een vrijblijvend gesprek aan</AppButton
+        >
       </div>
     </section>
   </div>
