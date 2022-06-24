@@ -2,7 +2,7 @@
   <div>
     <!-- Hero -->
     <section
-      class="container grid items-center justify-center grid-cols-2 gap-12 pt-20 mx-auto bg-left bg-no-repeat bg-cover lg:pt-32 lg:pb-40 section-padding-x md:h-[90vh] lg:grid-cols-12"
+      class="container grid items-center justify-center grid-cols-2 gap-12 pt-20 lg:pt-32 lg:pb-40 md:h-[90vh] lg:grid-cols-12"
     >
       <!-- Content -->
       <div
@@ -35,11 +35,8 @@
     </section>
 
     <!-- Diensten -->
-    <section
-      id="onze-diensten"
-      class="py-20 bg-light-alt md:py-40 section-padding-x"
-    >
-      <div class="container flex flex-col items-center justify-center mx-auto">
+    <section id="onze-diensten" class="py-20 bg-light-alt md:py-40">
+      <div class="container flex flex-col items-center justify-center">
         <!-- Section title -->
         <div class="flex flex-col items-center mb-8">
           <h2 class="mb-4 text-4xl font-bold lg:text-5xl font-display">
@@ -66,10 +63,8 @@
     </section>
 
     <!-- Cases -->
-    <section id="cases" class="py-20 md:py-40 section-padding-x">
-      <div
-        class="container flex flex-col items-center justify-center mx-auto"
-      >
+    <section id="cases" class="py-20 md:py-40">
+      <div class="container flex flex-col items-center justify-center">
         <!-- Section heading -->
         <div class="flex flex-col items-center mb-16">
           <h2 class="mb-4 text-4xl font-bold lg:text-5xl font-display">
@@ -97,8 +92,8 @@
     </section>
 
     <!-- Cta -->
-    <section class="flex justify-center py-20 section-padding-x bg-dark-300 md:py-40">
-      <div class="flex flex-col content-container">
+    <section class="flex justify-center py-20 bg-dark-300 md:py-40">
+      <div class="flex flex-col">
         <!-- Heading -->
         <div class="flex flex-col mb-4">
           <div
