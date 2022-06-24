@@ -2,11 +2,11 @@
   <div>
     <!-- Hero -->
     <section
-      class="container mx-auto pt-16 lg:pt-32 pb-20 lg:pb-40 bg-left bg-no-repeat bg-cover section-padding-x grid lg:grid-cols-2 gap-16"
+      class="container grid gap-16 pt-16 pb-20 lg:pt-32 lg:pb-40 lg:grid-cols-2"
     >
       <!-- Content -->
       <div>
-        <h1 class="text-4xl lg:text-5xl font-bold font-display mb-4">
+        <h1 class="mb-4 text-4xl font-bold lg:text-5xl font-display">
           Scoor online met een conversiegerichte website
         </h1>
 
@@ -19,7 +19,7 @@
 
         <!-- Buttons -->
         <div
-          class="flex flex-col xl:flex-row space-y-4 xl:space-y-0 xl:space-x-8"
+          class="flex flex-col space-y-4 xl:flex-row xl:space-y-0 xl:space-x-8"
         >
           <AppButton hashlink="kwaliteiten">Ontdek onze kwaliteiten</AppButton>
           <AppButton to="/contact" color="transparent"
@@ -39,14 +39,11 @@
     </section>
 
     <!-- Features -->
-    <section
-      id="kwaliteiten"
-      class="pt-16 lg:pt-32 pb-20 lg:pb-40 section-padding-x bg-light-alt"
-    >
-      <div class="container mx-auto">
+    <section id="kwaliteiten" class="py-20 md:py-40 bg-light-alt">
+      <div class="container">
         <!-- Heading -->
         <div class="flex flex-col items-center w-full mb-16">
-          <h2 class="text-4xl lg:text-5xl font-bold font-display mb-4">
+          <h2 class="mb-4 text-4xl font-bold lg:text-5xl font-display">
             Waarom VibeFusion?
           </h2>
 
@@ -93,11 +90,11 @@
     </section>
 
     <!-- Projects -->
-    <section class="pt-16 lg:pt-32 pb-20 lg:pb-40 section-padding-x">
-      <div class="container mx-auto">
+    <section class="py-20 md:py-40">
+      <div class="container">
         <!-- Heading -->
         <div class="flex flex-col items-center w-full mb-16">
-          <h2 class="text-4xl lg:text-5xl font-bold font-display mb-4">
+          <h2 class="mb-4 text-4xl font-bold lg:text-5xl font-display">
             Recente projecten
           </h2>
 
@@ -122,14 +119,12 @@
     </section>
 
     <!-- Roadmap -->
-    <section
-      class="pt-16 lg:pt-32 pb-20 lg:pb-40 section-padding-x bg-light-alt xl:px-20"
-    >
-      <div class="container mx-auto">
+    <section class="py-20 md:py-40 bg-light-alt xl:px-20">
+      <div class="container">
         <!-- Heading -->
         <div class="flex flex-col items-center w-full mb-16">
           <h2
-            class="text-4xl lg:text-5xl font-bold font-display mb-4 text-center"
+            class="mb-4 text-4xl font-bold text-center lg:text-5xl font-display"
           >
             Hoe verloopt het proces?
           </h2>
@@ -172,14 +167,12 @@
     </section>
 
     <!-- Faq -->
-    <section
-      class="bg-light-main pt-16 lg:pt-32 pb-20 lg:pb-40 section-padding-x"
-    >
+    <section class="py-20 md:py-40 bg-light-main">
       <div class="container">
         <!-- Heading -->
-        <div class="flex flex-col mb-16 items-center sm:items-start">
+        <div class="flex flex-col items-center mb-16 sm:items-start">
           <h2
-            class="text-4xl lg:text-5xl font-bold font-display mb-4 text-center sm:text-left"
+            class="mb-4 text-4xl font-bold text-center lg:text-5xl font-display sm:text-left"
           >
             Veelgestelde vragen
           </h2>
