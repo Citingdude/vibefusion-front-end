@@ -1,5 +1,13 @@
 <template>
   <div>
+    <Head>
+      <Title>Webshop - VibeFusion</Title>
+      <Meta
+        name="description"
+        content="Verkoop eenvoudig online met een betaalbare webshop"
+      />
+    </Head>
+
     <!-- Hero -->
     <section class="py-20 md:py-40">
       <div class="container grid gap-16 lg:grid-cols-2">

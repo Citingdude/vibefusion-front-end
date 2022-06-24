@@ -1,5 +1,10 @@
 <template>
   <div>
+    <Head>
+      <Title>VibeFusion</Title>
+      <Meta name="description" content="Verstserk je merk met de juiste Vibe" />
+    </Head>
+
     <!-- Hero -->
     <section
       class="container grid items-center justify-center grid-cols-2 gap-12 pt-20 md:pt-32 lg:pb-40 xl:h-[90vh] lg:grid-cols-12"

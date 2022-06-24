@@ -1,5 +1,13 @@
 <template>
   <div>
+    <Head>
+      <Title>Cases - VibeFusion</Title>
+      <Meta
+        name="description"
+        content="Lees onze cases"
+      />
+    </Head>
+
     <!-- Hero -->
     <section class="container py-20 md:py-40">
       <LayoutHeading

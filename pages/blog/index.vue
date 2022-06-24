@@ -1,5 +1,13 @@
 <template>
   <div>
+    <Head>
+      <Title>Blog - VibeFusion</Title>
+      <Meta
+        name="description"
+        content="Lees onze blogs"
+      />
+    </Head>
+
     <section class="py-20 md:py-40 bg-light-alt">
       <div class="container">
         <h1 class="mb-16 text-6xl font-bold font-display">Onze blogs</h1>

@@ -1,5 +1,10 @@
 <template>
   <div>
+    <Head>
+      <Title>Webdesign - VibeFusion</Title>
+      <Meta name="description" content="Scoor online met een conversiegerichte website" />
+    </Head>
+
     <!-- Hero -->
     <section
       class="container grid gap-16 pt-16 pb-20 lg:pt-32 lg:pb-40 lg:grid-cols-2"
