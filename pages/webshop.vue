@@ -112,7 +112,7 @@
 
     <!-- Integrations -->
     <section class="py-20 md:py-40 bg-light-alt">
-      <div class="container grid items-center gap-16 mx-auto lg:grid-cols-2">
+      <div class="container grid items-center gap-16 lg:grid-cols-2">
         <!-- Content -->
         <div>
           <LayoutHeading
@@ -147,7 +147,7 @@
 
     <!-- Responsive -->
     <section class="py-20 md:py-40 bg-light-main">
-      <div class="container grid items-center gap-16 mx-auto lg:grid-cols-2">
+      <div class="container grid items-center gap-16 lg:grid-cols-2">
         <!-- Image -->
         <div class="order-2 sm:order-1">
           <img
